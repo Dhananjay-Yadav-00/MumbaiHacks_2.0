@@ -1,0 +1,32 @@
+During a large-scale emergency, the default approach of sending all patients to the nearest hospital creates a critical bottleneck:
+
+The closest facility becomes overwhelmed, leading to long wait times.
+Nearby hospitals remain underutilized.
+The result: delayed critical care and avoidable fatalities.
+Urban healthcare networks lack real-time, city-wide coordination — that’s where our AI Emergency Load Balancer comes in.
+
+The system functions as an autonomous emergency coordinator following a Sense–Think–Act cycle:
+
+🧠 SENSE
+Monitors real-time data from hospitals, including:
+
+Bed occupancy
+Staff availability
+Specialty care units (e.g., trauma, burn, cardiac)
+🤔 THINK
+Predicts and plans using AI:
+
+XGBoost model forecasts future ER wait times.
+An optimization algorithm computes a “Time-to-Treatment” score — balancing travel time with predicted waiting time.
+🚑 ACT
+Executes dynamic routing and load balancing:
+
+Suggests ambulance dispatch routes.
+Notifies hospitals in advance.
+Allocates resources to prevent system bottlenecks before they form.
+
+cd backend
+.\venv\Scripts\python -m flask --app src.app run --host=0.0.0.0 --port=5001
+
+cd backend
+.\venv\Scripts\python -m flask --app src.app run --host=0.0.0.0 --port=5001

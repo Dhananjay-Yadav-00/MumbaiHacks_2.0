@@ -1,0 +1,36 @@
+{
+  "incident": {
+    "location": "Marine Drive",
+    "patients": 4,
+    "critical": 1,
+    "stable": 3
+  },
+  "ambulance": [
+    {
+      "hospital": "H6",
+      "eta_min": 6,
+      "critical": 1,
+      "stable": 3,
+      "total": 4
+    }
+  ],
+  "hospital_alerts": [
+    {
+      "hospital": "H6",
+      "alerts": [
+        "Prepare trauma team for 1 critical cases",
+        "Prepare ER bays for 3 stable cases",
+        "Arrange 1 ICU beds/space",
+        "Arrange 1 ventilators",
+        "Procure 2 oxygen cylinders"
+      ]
+    }
+  ],
+  "staff": [
+    "H6: Call 2 standby ER doctors to handle surge"
+  ],
+  "public": [
+    "Moderate surge expected. Please avoid unnecessary hospital visits if possible."
+  ],
+  "unassigned": []
+}

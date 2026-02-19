@@ -1,0 +1,79 @@
+{
+  "incident_location": "Khar west",
+  "scenario": "outbreak",
+  "total_critical": 3,
+  "total_stable": 8,
+  "assignments": [
+    {
+      "hospital_id": "H12",
+      "travel_min": 5,
+      "pred_adm_next": 0.3382782634487367,
+      "pred_icu_next": 0.7393149992195378,
+      "pred_vent_next": 1.2489310685720083,
+      "capacity_score": 10.0,
+      "readiness_index": 0.6,
+      "total_score": 1.6476556526897475,
+      "assigned_critical": 3,
+      "assigned_stable": 4,
+      "recommendation": {
+        "extra_doctors": 0,
+        "extra_specialists": 2,
+        "icu_short": 0,
+        "vent_short": 1,
+        "oxygen_cylinders": 2,
+        "blood_units": 7,
+        "trauma_kits": 5,
+        "urgency": "HIGH"
+      },
+      "assign_patients": 7
+    },
+    {
+      "hospital_id": "H9",
+      "travel_min": 5,
+      "pred_adm_next": 3.218001136180227,
+      "pred_icu_next": 0.8719592088030527,
+      "pred_vent_next": -0.06922907427870235,
+      "capacity_score": 10.0,
+      "readiness_index": 0.6,
+      "total_score": 2.2236002272360453,
+      "assigned_critical": 0,
+      "assigned_stable": 4,
+      "recommendation": {
+        "extra_doctors": 0,
+        "extra_specialists": 0,
+        "icu_short": 0,
+        "vent_short": 0,
+        "oxygen_cylinders": 1,
+        "blood_units": 1,
+        "trauma_kits": 0,
+        "urgency": "LOW"
+      },
+      "assign_patients": 4
+    }
+  ],
+  "generated_at": "2025-09-01T12:41:41",
+  "action_plan": {
+    "ambulance_dispatch": [
+      {
+        "hospital_id": "H12",
+        "critical": 3,
+        "stable": 4
+      },
+      {
+        "hospital_id": "H9",
+        "critical": 0,
+        "stable": 4
+      }
+    ],
+    "hospital_alerts": [
+      "Notify H12 of incoming patients",
+      "Notify H9 of incoming patients"
+    ],
+    "staff_actions": [
+      "Prepare ER teams at H12",
+      "Prepare ER teams at H9",
+      "Activate infection control and isolation wards"
+    ],
+    "public_advisory": "Outbreak detected. Wear masks, avoid unnecessary hospital visits."
+  }
+}

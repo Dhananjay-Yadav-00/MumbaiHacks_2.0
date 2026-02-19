@@ -1,0 +1,86 @@
+{
+  "incident_location": "Versova",
+  "scenario": "normal",
+  "total_critical": 3,
+  "total_stable": 4,
+  "assignments": [
+    {
+      "hospital_id": "H9",
+      "hospital_name": "Hiranandani Hospital",
+      "distance_km": null,
+      "travel_min": 7.0,
+      "pred_adm_next": 0.31769454835847194,
+      "pred_icu_next": 0.11417539318963041,
+      "pred_vent_next": 0.11030211209888235,
+      "capacity_score": 10.0,
+      "readiness_index": 0.6,
+      "total_score": 2.2435389096716944,
+      "assigned_critical": 3,
+      "assigned_stable": 4,
+      "recommendation": {
+        "extra_doctors": 0,
+        "extra_specialists": 2,
+        "icu_short": 0,
+        "vent_short": 0,
+        "oxygen_cylinders": 2,
+        "blood_units": 7,
+        "trauma_kits": 5,
+        "urgency": "HIGH"
+      },
+      "assign_patients": 7
+    }
+  ],
+  "generated_at": "2025-10-19T15:30:19",
+  "action_plan": {
+    "incident_location": "Versova",
+    "scenario": "normal",
+    "summary": {
+      "total_patients": 7,
+      "total_critical": 3,
+      "total_stable": 4,
+      "hospitals_used": 1
+    },
+    "ambulance_dispatch": [
+      {
+        "hospital_id": "H9",
+        "hospital_name": "Hiranandani Hospital",
+        "critical": 3,
+        "stable": 4,
+        "distance_km": null,
+        "travel_min": 7.0
+      }
+    ],
+    "hospital_alerts": [
+      {
+        "hospital_id": "H9",
+        "hospital_name": "Hiranandani Hospital",
+        "message": "Notify Hiranandani Hospital (H9) of incoming patients: 3 critical, 4 stable"
+      }
+    ],
+    "staff_actions": [
+      {
+        "hospital_id": "H9",
+        "hospital_name": "Hiranandani Hospital",
+        "action": "Prepare ER teams at Hiranandani Hospital (H9)"
+      },
+      {
+        "hospital_id": "H9",
+        "hospital_name": "Hiranandani Hospital",
+        "action": "Mobilize +2 specialists to Hiranandani Hospital"
+      },
+      {
+        "hospital_id": "H9",
+        "hospital_name": "Hiranandani Hospital",
+        "action": "Prepare supplies: 2 O2 cylinders, 7 blood units, 5 trauma kits at Hiranandani Hospital"
+      },
+      {
+        "hospital_id": "H9",
+        "hospital_name": "Hiranandani Hospital",
+        "action": "Urgency: HIGH — escalate to hospital command"
+      }
+    ],
+    "public_advisory": "Moderate surge expected. Minimize hospital visits if possible.",
+    "generated_at": "2025-10-19T15:30:19",
+    "action_plan_generated_at": "2025-10-19T15:30:20"
+  }
+}

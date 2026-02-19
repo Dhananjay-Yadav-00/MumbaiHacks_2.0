@@ -1,0 +1,149 @@
+{
+  "incident_location": "Khar East",
+  "scenario": "normal",
+  "total_critical": 2,
+  "total_stable": 7,
+  "assignments": [
+    {
+      "hospital_id": "H10",
+      "hospital_name": "Fortis Hospital Mulund",
+      "distance_km": null,
+      "travel_min": 11.0,
+      "pred_adm_next": 0.33688595288253975,
+      "pred_icu_next": 0.1799946647100766,
+      "pred_vent_next": 1.4062251232278027,
+      "capacity_score": 10.0,
+      "readiness_index": 0.6,
+      "total_score": 3.447377190576508,
+      "assigned_critical": 2,
+      "assigned_stable": 4,
+      "recommendation": {
+        "extra_doctors": 0,
+        "extra_specialists": 1,
+        "icu_short": 0,
+        "vent_short": 1,
+        "oxygen_cylinders": 2,
+        "blood_units": 5,
+        "trauma_kits": 3,
+        "urgency": "HIGH"
+      },
+      "assign_patients": 6
+    },
+    {
+      "hospital_id": "H7",
+      "hospital_name": "Jaslok Hospital",
+      "distance_km": null,
+      "travel_min": 11.0,
+      "pred_adm_next": 0.44862664829749943,
+      "pred_icu_next": 0.22388308199788917,
+      "pred_vent_next": 1.2435428671821296,
+      "capacity_score": 10.0,
+      "readiness_index": 0.6,
+      "total_score": 3.4697253296594996,
+      "assigned_critical": 0,
+      "assigned_stable": 3,
+      "recommendation": {
+        "extra_doctors": 0,
+        "extra_specialists": 0,
+        "icu_short": 0,
+        "vent_short": 1,
+        "oxygen_cylinders": 1,
+        "blood_units": 1,
+        "trauma_kits": 0,
+        "urgency": "HIGH"
+      },
+      "assign_patients": 3
+    }
+  ],
+  "generated_at": "2025-10-18T01:36:42",
+  "action_plan": {
+    "incident_location": "Khar East",
+    "scenario": "normal",
+    "summary": {
+      "total_patients": 9,
+      "total_critical": 2,
+      "total_stable": 7,
+      "hospitals_used": 2
+    },
+    "ambulance_dispatch": [
+      {
+        "hospital_id": "H10",
+        "hospital_name": "Fortis Hospital Mulund",
+        "critical": 2,
+        "stable": 4,
+        "distance_km": null,
+        "travel_min": 11.0
+      },
+      {
+        "hospital_id": "H7",
+        "hospital_name": "Jaslok Hospital",
+        "critical": 0,
+        "stable": 3,
+        "distance_km": null,
+        "travel_min": 11.0
+      }
+    ],
+    "hospital_alerts": [
+      {
+        "hospital_id": "H10",
+        "hospital_name": "Fortis Hospital Mulund",
+        "message": "Notify Fortis Hospital Mulund (H10) of incoming patients: 2 critical, 4 stable"
+      },
+      {
+        "hospital_id": "H7",
+        "hospital_name": "Jaslok Hospital",
+        "message": "Notify Jaslok Hospital (H7) of incoming patients: 0 critical, 3 stable"
+      }
+    ],
+    "staff_actions": [
+      {
+        "hospital_id": "H10",
+        "hospital_name": "Fortis Hospital Mulund",
+        "action": "Prepare ER teams at Fortis Hospital Mulund (H10)"
+      },
+      {
+        "hospital_id": "H10",
+        "hospital_name": "Fortis Hospital Mulund",
+        "action": "Mobilize +1 specialists to Fortis Hospital Mulund"
+      },
+      {
+        "hospital_id": "H10",
+        "hospital_name": "Fortis Hospital Mulund",
+        "action": "Ensure 1 ventilators available at Fortis Hospital Mulund"
+      },
+      {
+        "hospital_id": "H10",
+        "hospital_name": "Fortis Hospital Mulund",
+        "action": "Prepare supplies: 2 O2 cylinders, 5 blood units, 3 trauma kits at Fortis Hospital Mulund"
+      },
+      {
+        "hospital_id": "H10",
+        "hospital_name": "Fortis Hospital Mulund",
+        "action": "Urgency: HIGH — escalate to hospital command"
+      },
+      {
+        "hospital_id": "H7",
+        "hospital_name": "Jaslok Hospital",
+        "action": "Prepare ER teams at Jaslok Hospital (H7)"
+      },
+      {
+        "hospital_id": "H7",
+        "hospital_name": "Jaslok Hospital",
+        "action": "Ensure 1 ventilators available at Jaslok Hospital"
+      },
+      {
+        "hospital_id": "H7",
+        "hospital_name": "Jaslok Hospital",
+        "action": "Prepare supplies: 1 O2 cylinders, 1 blood units at Jaslok Hospital"
+      },
+      {
+        "hospital_id": "H7",
+        "hospital_name": "Jaslok Hospital",
+        "action": "Urgency: HIGH — escalate to hospital command"
+      }
+    ],
+    "public_advisory": "Moderate surge expected. Minimize hospital visits if possible.",
+    "generated_at": "2025-10-18T01:36:42",
+    "action_plan_generated_at": "2025-10-18T01:36:42"
+  }
+}

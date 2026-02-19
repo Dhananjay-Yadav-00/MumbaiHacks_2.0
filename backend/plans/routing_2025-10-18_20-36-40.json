@@ -1,0 +1,328 @@
+{
+  "incident_location": "Bandra",
+  "scenario": "normal",
+  "total_critical": 14,
+  "total_stable": 7,
+  "assignments": [
+    {
+      "hospital_id": "H3",
+      "hospital_name": "Lilavati Hospital",
+      "distance_km": 1.127515831064466,
+      "travel_min": 3.0,
+      "pred_adm_next": 0.35077738198709685,
+      "pred_icu_next": 0.22298720802526936,
+      "pred_vent_next": 0.1293296433593289,
+      "capacity_score": 10.0,
+      "readiness_index": 0.6,
+      "total_score": 1.0501554763974192,
+      "assigned_critical": 3,
+      "assigned_stable": 4,
+      "recommendation": {
+        "extra_doctors": 0,
+        "extra_specialists": 2,
+        "icu_short": 0,
+        "vent_short": 0,
+        "oxygen_cylinders": 2,
+        "blood_units": 7,
+        "trauma_kits": 5,
+        "urgency": "HIGH"
+      },
+      "assign_patients": 7
+    },
+    {
+      "hospital_id": "H4",
+      "hospital_name": "Hinduja Hospital",
+      "distance_km": 1.9018147073083873,
+      "travel_min": 3.8036294146167746,
+      "pred_adm_next": 0.33447150328930103,
+      "pred_icu_next": 0.08734983111303665,
+      "pred_vent_next": 1.424286005863328,
+      "capacity_score": 10.0,
+      "readiness_index": 0.6,
+      "total_score": 1.2879831250428926,
+      "assigned_critical": 3,
+      "assigned_stable": 3,
+      "recommendation": {
+        "extra_doctors": 0,
+        "extra_specialists": 2,
+        "icu_short": 0,
+        "vent_short": 1,
+        "oxygen_cylinders": 2,
+        "blood_units": 7,
+        "trauma_kits": 5,
+        "urgency": "HIGH"
+      },
+      "assign_patients": 6
+    },
+    {
+      "hospital_id": "H2",
+      "hospital_name": "Sion Hospital",
+      "distance_km": 2.593579653060824,
+      "travel_min": 5.187159306121648,
+      "pred_adm_next": 0.3675150663917763,
+      "pred_icu_next": 0.11826753667872378,
+      "pred_vent_next": 0.062347550270872486,
+      "capacity_score": 10.0,
+      "readiness_index": 0.6,
+      "total_score": 1.7096508051148498,
+      "assigned_critical": 3,
+      "assigned_stable": 0,
+      "recommendation": {
+        "extra_doctors": 0,
+        "extra_specialists": 2,
+        "icu_short": 0,
+        "vent_short": 0,
+        "oxygen_cylinders": 2,
+        "blood_units": 7,
+        "trauma_kits": 5,
+        "urgency": "HIGH"
+      },
+      "assign_patients": 3
+    },
+    {
+      "hospital_id": "H5",
+      "hospital_name": "Nanavati Hospital",
+      "distance_km": 4.515166785929748,
+      "travel_min": 9.030333571859495,
+      "pred_adm_next": 0.33023794425325254,
+      "pred_icu_next": 0.12093830379480341,
+      "pred_vent_next": 1.4649541255733294,
+      "capacity_score": 10.0,
+      "readiness_index": 0.6,
+      "total_score": 2.855147660408499,
+      "assigned_critical": 3,
+      "assigned_stable": 0,
+      "recommendation": {
+        "extra_doctors": 0,
+        "extra_specialists": 2,
+        "icu_short": 0,
+        "vent_short": 1,
+        "oxygen_cylinders": 2,
+        "blood_units": 7,
+        "trauma_kits": 5,
+        "urgency": "HIGH"
+      },
+      "assign_patients": 3
+    },
+    {
+      "hospital_id": "H1",
+      "hospital_name": "KEM Hospital",
+      "distance_km": 5.806584736982552,
+      "travel_min": 11.613169473965105,
+      "pred_adm_next": 0.2722664721626511,
+      "pred_icu_next": 0.10847625942865712,
+      "pred_vent_next": 0.09357455790533382,
+      "capacity_score": 10.0,
+      "readiness_index": 0.6,
+      "total_score": 3.618404136622061,
+      "assigned_critical": 2,
+      "assigned_stable": 0,
+      "recommendation": {
+        "extra_doctors": 0,
+        "extra_specialists": 1,
+        "icu_short": 0,
+        "vent_short": 0,
+        "oxygen_cylinders": 2,
+        "blood_units": 5,
+        "trauma_kits": 3,
+        "urgency": "HIGH"
+      },
+      "assign_patients": 2
+    }
+  ],
+  "generated_at": "2025-10-18T20:36:39",
+  "action_plan": {
+    "incident_location": "Bandra",
+    "scenario": "normal",
+    "summary": {
+      "total_patients": 21,
+      "total_critical": 14,
+      "total_stable": 7,
+      "hospitals_used": 5
+    },
+    "ambulance_dispatch": [
+      {
+        "hospital_id": "H3",
+        "hospital_name": "Lilavati Hospital",
+        "critical": 3,
+        "stable": 4,
+        "distance_km": 1.127515831064466,
+        "travel_min": 3.0
+      },
+      {
+        "hospital_id": "H4",
+        "hospital_name": "Hinduja Hospital",
+        "critical": 3,
+        "stable": 3,
+        "distance_km": 1.9018147073083873,
+        "travel_min": 3.8036294146167746
+      },
+      {
+        "hospital_id": "H2",
+        "hospital_name": "Sion Hospital",
+        "critical": 3,
+        "stable": 0,
+        "distance_km": 2.593579653060824,
+        "travel_min": 5.187159306121648
+      },
+      {
+        "hospital_id": "H5",
+        "hospital_name": "Nanavati Hospital",
+        "critical": 3,
+        "stable": 0,
+        "distance_km": 4.515166785929748,
+        "travel_min": 9.030333571859495
+      },
+      {
+        "hospital_id": "H1",
+        "hospital_name": "KEM Hospital",
+        "critical": 2,
+        "stable": 0,
+        "distance_km": 5.806584736982552,
+        "travel_min": 11.613169473965105
+      }
+    ],
+    "hospital_alerts": [
+      {
+        "hospital_id": "H3",
+        "hospital_name": "Lilavati Hospital",
+        "message": "Notify Lilavati Hospital (H3) of incoming patients: 3 critical, 4 stable"
+      },
+      {
+        "hospital_id": "H4",
+        "hospital_name": "Hinduja Hospital",
+        "message": "Notify Hinduja Hospital (H4) of incoming patients: 3 critical, 3 stable"
+      },
+      {
+        "hospital_id": "H2",
+        "hospital_name": "Sion Hospital",
+        "message": "Notify Sion Hospital (H2) of incoming patients: 3 critical, 0 stable"
+      },
+      {
+        "hospital_id": "H5",
+        "hospital_name": "Nanavati Hospital",
+        "message": "Notify Nanavati Hospital (H5) of incoming patients: 3 critical, 0 stable"
+      },
+      {
+        "hospital_id": "H1",
+        "hospital_name": "KEM Hospital",
+        "message": "Notify KEM Hospital (H1) of incoming patients: 2 critical, 0 stable"
+      }
+    ],
+    "staff_actions": [
+      {
+        "hospital_id": "H3",
+        "hospital_name": "Lilavati Hospital",
+        "action": "Prepare ER teams at Lilavati Hospital (H3)"
+      },
+      {
+        "hospital_id": "H3",
+        "hospital_name": "Lilavati Hospital",
+        "action": "Mobilize +2 specialists to Lilavati Hospital"
+      },
+      {
+        "hospital_id": "H3",
+        "hospital_name": "Lilavati Hospital",
+        "action": "Prepare supplies: 2 O2 cylinders, 7 blood units, 5 trauma kits at Lilavati Hospital"
+      },
+      {
+        "hospital_id": "H3",
+        "hospital_name": "Lilavati Hospital",
+        "action": "Urgency: HIGH — escalate to hospital command"
+      },
+      {
+        "hospital_id": "H4",
+        "hospital_name": "Hinduja Hospital",
+        "action": "Prepare ER teams at Hinduja Hospital (H4)"
+      },
+      {
+        "hospital_id": "H4",
+        "hospital_name": "Hinduja Hospital",
+        "action": "Mobilize +2 specialists to Hinduja Hospital"
+      },
+      {
+        "hospital_id": "H4",
+        "hospital_name": "Hinduja Hospital",
+        "action": "Ensure 1 ventilators available at Hinduja Hospital"
+      },
+      {
+        "hospital_id": "H4",
+        "hospital_name": "Hinduja Hospital",
+        "action": "Prepare supplies: 2 O2 cylinders, 7 blood units, 5 trauma kits at Hinduja Hospital"
+      },
+      {
+        "hospital_id": "H4",
+        "hospital_name": "Hinduja Hospital",
+        "action": "Urgency: HIGH — escalate to hospital command"
+      },
+      {
+        "hospital_id": "H2",
+        "hospital_name": "Sion Hospital",
+        "action": "Prepare ER teams at Sion Hospital (H2)"
+      },
+      {
+        "hospital_id": "H2",
+        "hospital_name": "Sion Hospital",
+        "action": "Mobilize +2 specialists to Sion Hospital"
+      },
+      {
+        "hospital_id": "H2",
+        "hospital_name": "Sion Hospital",
+        "action": "Prepare supplies: 2 O2 cylinders, 7 blood units, 5 trauma kits at Sion Hospital"
+      },
+      {
+        "hospital_id": "H2",
+        "hospital_name": "Sion Hospital",
+        "action": "Urgency: HIGH — escalate to hospital command"
+      },
+      {
+        "hospital_id": "H5",
+        "hospital_name": "Nanavati Hospital",
+        "action": "Prepare ER teams at Nanavati Hospital (H5)"
+      },
+      {
+        "hospital_id": "H5",
+        "hospital_name": "Nanavati Hospital",
+        "action": "Mobilize +2 specialists to Nanavati Hospital"
+      },
+      {
+        "hospital_id": "H5",
+        "hospital_name": "Nanavati Hospital",
+        "action": "Ensure 1 ventilators available at Nanavati Hospital"
+      },
+      {
+        "hospital_id": "H5",
+        "hospital_name": "Nanavati Hospital",
+        "action": "Prepare supplies: 2 O2 cylinders, 7 blood units, 5 trauma kits at Nanavati Hospital"
+      },
+      {
+        "hospital_id": "H5",
+        "hospital_name": "Nanavati Hospital",
+        "action": "Urgency: HIGH — escalate to hospital command"
+      },
+      {
+        "hospital_id": "H1",
+        "hospital_name": "KEM Hospital",
+        "action": "Prepare ER teams at KEM Hospital (H1)"
+      },
+      {
+        "hospital_id": "H1",
+        "hospital_name": "KEM Hospital",
+        "action": "Mobilize +1 specialists to KEM Hospital"
+      },
+      {
+        "hospital_id": "H1",
+        "hospital_name": "KEM Hospital",
+        "action": "Prepare supplies: 2 O2 cylinders, 5 blood units, 3 trauma kits at KEM Hospital"
+      },
+      {
+        "hospital_id": "H1",
+        "hospital_name": "KEM Hospital",
+        "action": "Urgency: HIGH — escalate to hospital command"
+      }
+    ],
+    "public_advisory": "Moderate surge expected. Minimize hospital visits if possible.",
+    "generated_at": "2025-10-18T20:36:39",
+    "action_plan_generated_at": "2025-10-18T20:36:40"
+  }
+}

@@ -1,0 +1,198 @@
+{
+  "incident_location": "Bandra west",
+  "scenario": "festival",
+  "total_critical": 3,
+  "total_stable": 21,
+  "assignments": [
+    {
+      "hospital_id": "H1",
+      "travel_min": 7,
+      "pred_adm_next": 2.880930743942299,
+      "pred_icu_next": 0.3731881159908327,
+      "pred_vent_next": 0.08007123103442854,
+      "capacity_score": 10.0,
+      "readiness_index": 0.6,
+      "total_score": 2.7561861487884602,
+      "assigned_critical": 3,
+      "assigned_stable": 4,
+      "recommendation": {
+        "extra_doctors": 0,
+        "extra_specialists": 2,
+        "icu_short": 0,
+        "vent_short": 0,
+        "oxygen_cylinders": 3,
+        "blood_units": 7,
+        "trauma_kits": 5,
+        "urgency": "HIGH"
+      },
+      "assign_patients": 7
+    },
+    {
+      "hospital_id": "H11",
+      "travel_min": 13,
+      "pred_adm_next": 1.1839511317889828,
+      "pred_icu_next": 1.3217683377454414,
+      "pred_vent_next": 1.2855066302623481,
+      "capacity_score": 10.0,
+      "readiness_index": 0.6,
+      "total_score": 4.216790226357796,
+      "assigned_critical": 0,
+      "assigned_stable": 4,
+      "recommendation": {
+        "extra_doctors": 0,
+        "extra_specialists": 0,
+        "icu_short": 1,
+        "vent_short": 1,
+        "oxygen_cylinders": 1,
+        "blood_units": 1,
+        "trauma_kits": 0,
+        "urgency": "HIGH"
+      },
+      "assign_patients": 4
+    },
+    {
+      "hospital_id": "H5",
+      "travel_min": 16,
+      "pred_adm_next": 1.230402434367806,
+      "pred_icu_next": 0.6802487586581283,
+      "pred_vent_next": 1.2921054602786946,
+      "capacity_score": 10.0,
+      "readiness_index": 0.6,
+      "total_score": 5.126080486873561,
+      "assigned_critical": 0,
+      "assigned_stable": 4,
+      "recommendation": {
+        "extra_doctors": 0,
+        "extra_specialists": 0,
+        "icu_short": 0,
+        "vent_short": 1,
+        "oxygen_cylinders": 1,
+        "blood_units": 1,
+        "trauma_kits": 0,
+        "urgency": "HIGH"
+      },
+      "assign_patients": 4
+    },
+    {
+      "hospital_id": "H6",
+      "travel_min": 15,
+      "pred_adm_next": 3.756649030846372,
+      "pred_icu_next": 0.3594176555434787,
+      "pred_vent_next": 1.4387034093674258,
+      "capacity_score": 10.0,
+      "readiness_index": 0.6,
+      "total_score": 5.331329806169275,
+      "assigned_critical": 0,
+      "assigned_stable": 4,
+      "recommendation": {
+        "extra_doctors": 0,
+        "extra_specialists": 0,
+        "icu_short": 0,
+        "vent_short": 1,
+        "oxygen_cylinders": 2,
+        "blood_units": 1,
+        "trauma_kits": 0,
+        "urgency": "HIGH"
+      },
+      "assign_patients": 4
+    },
+    {
+      "hospital_id": "H7",
+      "travel_min": 18,
+      "pred_adm_next": 3.6200739483149467,
+      "pred_icu_next": 1.0256568186772959,
+      "pred_vent_next": 1.306609316989411,
+      "capacity_score": 10.0,
+      "readiness_index": 0.6,
+      "total_score": 6.204014789662989,
+      "assigned_critical": 0,
+      "assigned_stable": 4,
+      "recommendation": {
+        "extra_doctors": 0,
+        "extra_specialists": 0,
+        "icu_short": 1,
+        "vent_short": 1,
+        "oxygen_cylinders": 2,
+        "blood_units": 1,
+        "trauma_kits": 0,
+        "urgency": "HIGH"
+      },
+      "assign_patients": 4
+    },
+    {
+      "hospital_id": "H4",
+      "travel_min": 20,
+      "pred_adm_next": 1.2337382186993842,
+      "pred_icu_next": 1.0772454449038327,
+      "pred_vent_next": 1.325331706929473,
+      "capacity_score": 10.0,
+      "readiness_index": 0.6,
+      "total_score": 6.326747643739877,
+      "assigned_critical": 0,
+      "assigned_stable": 1,
+      "recommendation": {
+        "extra_doctors": 0,
+        "extra_specialists": 0,
+        "icu_short": 1,
+        "vent_short": 1,
+        "oxygen_cylinders": 1,
+        "blood_units": 1,
+        "trauma_kits": 0,
+        "urgency": "HIGH"
+      },
+      "assign_patients": 1
+    }
+  ],
+  "generated_at": "2025-09-02T01:30:38",
+  "action_plan": {
+    "ambulance_dispatch": [
+      {
+        "hospital_id": "H1",
+        "critical": 3,
+        "stable": 4
+      },
+      {
+        "hospital_id": "H11",
+        "critical": 0,
+        "stable": 4
+      },
+      {
+        "hospital_id": "H5",
+        "critical": 0,
+        "stable": 4
+      },
+      {
+        "hospital_id": "H6",
+        "critical": 0,
+        "stable": 4
+      },
+      {
+        "hospital_id": "H7",
+        "critical": 0,
+        "stable": 4
+      },
+      {
+        "hospital_id": "H4",
+        "critical": 0,
+        "stable": 1
+      }
+    ],
+    "hospital_alerts": [
+      "Notify H1 of incoming patients",
+      "Notify H11 of incoming patients",
+      "Notify H5 of incoming patients",
+      "Notify H6 of incoming patients",
+      "Notify H7 of incoming patients",
+      "Notify H4 of incoming patients"
+    ],
+    "staff_actions": [
+      "Prepare ER teams at H1",
+      "Prepare ER teams at H11",
+      "Prepare ER teams at H5",
+      "Prepare ER teams at H6",
+      "Prepare ER teams at H7",
+      "Prepare ER teams at H4"
+    ],
+    "public_advisory": "Moderate surge expected. Minimize hospital visits if possible."
+  }
+}

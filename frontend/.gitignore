@@ -1,0 +1,57 @@
+# ===========================
+# FRONTEND (React/Vite)
+# ===========================
+frontend/node_modules/
+frontend/dist/
+frontend/dist-ssr/
+frontend/.env
+frontend/.env.local
+frontend/.env.production
+frontend/.env.development
+*.local
+
+# ===========================
+# BACKEND (Python)
+# ===========================
+__pycache__/
+*.py[cod]
+*$py.class
+venv/
+backend/venv/
+backend/__pycache__/
+backend/.env
+backend/.env.local
+instance/
+db.sqlite3
+*.db
+
+# ===========================
+# LOGS
+# ===========================
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# ===========================
+# EDITORS & SYSTEM FILES
+# ===========================
+.vscode/*
+!.vscode/extensions.json
+.idea/
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+Thumbs.db
+desktop.ini
+
+# ===========================
+# PACKAGE MANAGERS / TEMP
+# ===========================
+pip-wheel-metadata/

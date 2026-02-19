@@ -1,0 +1,271 @@
+{
+  "incident_location": "Versova",
+  "scenario": "normal",
+  "total_critical": 2,
+  "total_stable": 7,
+  "assignments": [
+    {
+      "hospital_id": "H5",
+      "hospital_name": "Nanavati Hospital",
+      "distance_km": 4.482571492746555,
+      "travel_min": 27.0,
+      "pred_adm_next": 0.33023794425325254,
+      "pred_icu_next": 0.12093830379480341,
+      "pred_vent_next": 1.4649541255733294,
+      "capacity_score": 10.0,
+      "readiness_index": 0.6,
+      "total_score": 8.24604758885065,
+      "assigned_critical": 2,
+      "assigned_stable": 4,
+      "recommendation": {
+        "extra_doctors": 0,
+        "extra_specialists": 1,
+        "icu_short": 0,
+        "vent_short": 1,
+        "oxygen_cylinders": 2,
+        "blood_units": 5,
+        "trauma_kits": 3,
+        "urgency": "HIGH"
+      },
+      "assign_patients": 6
+    },
+    {
+      "hospital_id": "H11",
+      "hospital_name": "SevenHills Hospital",
+      "distance_km": 5.600601752928633,
+      "travel_min": 34.0,
+      "pred_adm_next": 0.19653930706959433,
+      "pred_icu_next": 0.1703843931699731,
+      "pred_vent_next": 1.503080107572989,
+      "capacity_score": 10.0,
+      "readiness_index": 0.6,
+      "total_score": 10.319307861413918,
+      "assigned_critical": 0,
+      "assigned_stable": 3,
+      "recommendation": {
+        "extra_doctors": 0,
+        "extra_specialists": 0,
+        "icu_short": 0,
+        "vent_short": 1,
+        "oxygen_cylinders": 1,
+        "blood_units": 1,
+        "trauma_kits": 0,
+        "urgency": "HIGH"
+      },
+      "assign_patients": 3
+    }
+  ],
+  "hospital_scores": [
+    {
+      "hospital_id": "H5",
+      "hospital_name": "Nanavati Hospital",
+      "travel_min": 27.0,
+      "pred_adm_next": 0.33023794425325254,
+      "capacity_score": 10.0,
+      "readiness_index": 0.6,
+      "total_score": 8.24604758885065
+    },
+    {
+      "hospital_id": "H11",
+      "hospital_name": "SevenHills Hospital",
+      "travel_min": 34.0,
+      "pred_adm_next": 0.19653930706959433,
+      "capacity_score": 10.0,
+      "readiness_index": 0.6,
+      "total_score": 10.319307861413918
+    },
+    {
+      "hospital_id": "H3",
+      "hospital_name": "Lilavati Hospital",
+      "travel_min": 51.0,
+      "pred_adm_next": 0.35077738198709685,
+      "capacity_score": 10.0,
+      "readiness_index": 0.6,
+      "total_score": 15.450155476397418
+    },
+    {
+      "hospital_id": "H9",
+      "hospital_name": "Hiranandani Hospital",
+      "travel_min": 53.0,
+      "pred_adm_next": 0.31769454835847194,
+      "capacity_score": 10.0,
+      "readiness_index": 0.6,
+      "total_score": 16.043538909671692
+    },
+    {
+      "hospital_id": "H4",
+      "hospital_name": "Hinduja Hospital",
+      "travel_min": 59.0,
+      "pred_adm_next": 0.33447150328930103,
+      "capacity_score": 10.0,
+      "readiness_index": 0.6,
+      "total_score": 17.84689430065786
+    },
+    {
+      "hospital_id": "H2",
+      "hospital_name": "Sion Hospital",
+      "travel_min": 60.0,
+      "pred_adm_next": 0.3675150663917763,
+      "capacity_score": 10.0,
+      "readiness_index": 0.6,
+      "total_score": 18.153503013278353
+    },
+    {
+      "hospital_id": "H10",
+      "hospital_name": "Fortis Hospital Mulund",
+      "travel_min": 79.0,
+      "pred_adm_next": 0.33688595288253975,
+      "capacity_score": 10.0,
+      "readiness_index": 0.6,
+      "total_score": 23.847377190576506
+    },
+    {
+      "hospital_id": "H1",
+      "hospital_name": "KEM Hospital",
+      "travel_min": 81.0,
+      "pred_adm_next": 0.2722664721626511,
+      "capacity_score": 10.0,
+      "readiness_index": 0.6,
+      "total_score": 24.43445329443253
+    },
+    {
+      "hospital_id": "H12",
+      "hospital_name": "Wockhardt Hospital",
+      "travel_min": 99.0,
+      "pred_adm_next": 0.32098160579605234,
+      "capacity_score": 10.0,
+      "readiness_index": 0.6,
+      "total_score": 29.84419632115921
+    },
+    {
+      "hospital_id": "H7",
+      "hospital_name": "Jaslok Hospital",
+      "travel_min": 99.0,
+      "pred_adm_next": 0.44862664829749943,
+      "capacity_score": 10.0,
+      "readiness_index": 0.6,
+      "total_score": 29.8697253296595
+    },
+    {
+      "hospital_id": "H6",
+      "hospital_name": "Breach Candy Hospital",
+      "travel_min": 100.0,
+      "pred_adm_next": 0.2855122087364909,
+      "capacity_score": 10.0,
+      "readiness_index": 0.6,
+      "total_score": 30.137102441747295
+    },
+    {
+      "hospital_id": "H8",
+      "hospital_name": "Bombay Hospital",
+      "travel_min": 117.0,
+      "pred_adm_next": 0.4646830436456144,
+      "capacity_score": 10.0,
+      "readiness_index": 0.6,
+      "total_score": 35.272936608729125
+    }
+  ],
+  "generated_at": "2025-10-19T19:25:36",
+  "action_plan": {
+    "incident_location": "Versova",
+    "scenario": "normal",
+    "summary": {
+      "total_patients": 9,
+      "total_critical": 2,
+      "total_stable": 7,
+      "hospitals_used": 2
+    },
+    "decision_rationale": [
+      {
+        "hospital_id": "H5",
+        "hospital_name": "Nanavati Hospital",
+        "total_score": 8.25
+      },
+      {
+        "hospital_id": "H11",
+        "hospital_name": "SevenHills Hospital",
+        "total_score": 10.32
+      }
+    ],
+    "ambulance_dispatch": [
+      {
+        "hospital_id": "H5",
+        "hospital_name": "Nanavati Hospital",
+        "critical": 2,
+        "stable": 4,
+        "distance_km": 4.482571492746555,
+        "travel_min": 27.0
+      },
+      {
+        "hospital_id": "H11",
+        "hospital_name": "SevenHills Hospital",
+        "critical": 0,
+        "stable": 3,
+        "distance_km": 5.600601752928633,
+        "travel_min": 34.0
+      }
+    ],
+    "hospital_alerts": [
+      {
+        "hospital_id": "H5",
+        "hospital_name": "Nanavati Hospital",
+        "message": "Notify Nanavati Hospital (H5) of incoming patients: 2 critical, 4 stable"
+      },
+      {
+        "hospital_id": "H11",
+        "hospital_name": "SevenHills Hospital",
+        "message": "Notify SevenHills Hospital (H11) of incoming patients: 0 critical, 3 stable"
+      }
+    ],
+    "staff_actions": [
+      {
+        "hospital_id": "H5",
+        "hospital_name": "Nanavati Hospital",
+        "action": "Prepare ER teams at Nanavati Hospital (H5)"
+      },
+      {
+        "hospital_id": "H5",
+        "hospital_name": "Nanavati Hospital",
+        "action": "Mobilize +1 specialists to Nanavati Hospital"
+      },
+      {
+        "hospital_id": "H5",
+        "hospital_name": "Nanavati Hospital",
+        "action": "Ensure 1 ventilators available at Nanavati Hospital"
+      },
+      {
+        "hospital_id": "H5",
+        "hospital_name": "Nanavati Hospital",
+        "action": "Prepare supplies: 2 O2 cylinders, 5 blood units, 3 trauma kits at Nanavati Hospital"
+      },
+      {
+        "hospital_id": "H5",
+        "hospital_name": "Nanavati Hospital",
+        "action": "Urgency: HIGH — escalate to hospital command"
+      },
+      {
+        "hospital_id": "H11",
+        "hospital_name": "SevenHills Hospital",
+        "action": "Prepare ER teams at SevenHills Hospital (H11)"
+      },
+      {
+        "hospital_id": "H11",
+        "hospital_name": "SevenHills Hospital",
+        "action": "Ensure 1 ventilators available at SevenHills Hospital"
+      },
+      {
+        "hospital_id": "H11",
+        "hospital_name": "SevenHills Hospital",
+        "action": "Prepare supplies: 1 O2 cylinders, 1 blood units at SevenHills Hospital"
+      },
+      {
+        "hospital_id": "H11",
+        "hospital_name": "SevenHills Hospital",
+        "action": "Urgency: HIGH — escalate to hospital command"
+      }
+    ],
+    "public_advisory": "Moderate surge expected. Minimize hospital visits if possible.",
+    "generated_at": "2025-10-19T19:25:36",
+    "action_plan_generated_at": "2025-10-19T19:25:36"
+  }
+}

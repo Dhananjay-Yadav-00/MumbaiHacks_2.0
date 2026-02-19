@@ -1,0 +1,14 @@
+[
+  {
+    "location": "Marine Drive",
+    "patients": 4,
+    "critical": 1,
+    "stable": 3
+  },
+  {
+    "location": "Marine Drive",
+    "patients": 4,
+    "critical": 1,
+    "stable": 3
+  }
+]

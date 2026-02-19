@@ -1,0 +1,333 @@
+{
+  "incident_location": "Borivali",
+  "scenario": "outbreak",
+  "total_critical": 9,
+  "total_stable": 18,
+  "assignments": [
+    {
+      "hospital_id": "H12",
+      "hospital_name": "Wockhardt Hospital",
+      "distance_km": 5.92237313539757,
+      "travel_min": 11.84474627079514,
+      "pred_adm_next": 0.32098160579605234,
+      "pred_icu_next": 0.11154385659234092,
+      "pred_vent_next": 1.410509337159523,
+      "capacity_score": 10.0,
+      "readiness_index": 0.6,
+      "total_score": 3.697620202397752,
+      "assigned_critical": 3,
+      "assigned_stable": 4,
+      "recommendation": {
+        "extra_doctors": 0,
+        "extra_specialists": 2,
+        "icu_short": 0,
+        "vent_short": 1,
+        "oxygen_cylinders": 2,
+        "blood_units": 7,
+        "trauma_kits": 5,
+        "urgency": "HIGH"
+      },
+      "assign_patients": 7
+    },
+    {
+      "hospital_id": "H10",
+      "hospital_name": "Fortis Hospital Mulund",
+      "distance_km": 11.314812490281458,
+      "travel_min": 22.629624980562916,
+      "pred_adm_next": 0.33688595288253975,
+      "pred_icu_next": 0.1799946647100766,
+      "pred_vent_next": 1.4062251232278027,
+      "capacity_score": 10.0,
+      "readiness_index": 0.6,
+      "total_score": 6.936264684745383,
+      "assigned_critical": 3,
+      "assigned_stable": 4,
+      "recommendation": {
+        "extra_doctors": 0,
+        "extra_specialists": 2,
+        "icu_short": 0,
+        "vent_short": 1,
+        "oxygen_cylinders": 2,
+        "blood_units": 7,
+        "trauma_kits": 5,
+        "urgency": "HIGH"
+      },
+      "assign_patients": 7
+    },
+    {
+      "hospital_id": "H9",
+      "hospital_name": "Hiranandani Hospital",
+      "distance_km": 13.33902556097002,
+      "travel_min": 26.67805112194004,
+      "pred_adm_next": 0.31769454835847194,
+      "pred_icu_next": 0.11417539318963041,
+      "pred_vent_next": 0.11030211209888235,
+      "capacity_score": 10.0,
+      "readiness_index": 0.6,
+      "total_score": 8.146954246253706,
+      "assigned_critical": 3,
+      "assigned_stable": 4,
+      "recommendation": {
+        "extra_doctors": 0,
+        "extra_specialists": 2,
+        "icu_short": 0,
+        "vent_short": 0,
+        "oxygen_cylinders": 2,
+        "blood_units": 7,
+        "trauma_kits": 5,
+        "urgency": "HIGH"
+      },
+      "assign_patients": 7
+    },
+    {
+      "hospital_id": "H11",
+      "hospital_name": "SevenHills Hospital",
+      "distance_km": 13.921534551173037,
+      "travel_min": 27.843069102346075,
+      "pred_adm_next": 0.19653930706959433,
+      "pred_icu_next": 0.1703843931699731,
+      "pred_vent_next": 1.503080107572989,
+      "capacity_score": 10.0,
+      "readiness_index": 0.6,
+      "total_score": 8.472228592117741,
+      "assigned_critical": 0,
+      "assigned_stable": 4,
+      "recommendation": {
+        "extra_doctors": 0,
+        "extra_specialists": 0,
+        "icu_short": 0,
+        "vent_short": 1,
+        "oxygen_cylinders": 1,
+        "blood_units": 1,
+        "trauma_kits": 0,
+        "urgency": "HIGH"
+      },
+      "assign_patients": 4
+    },
+    {
+      "hospital_id": "H5",
+      "hospital_name": "Nanavati Hospital",
+      "distance_km": 14.928503387216912,
+      "travel_min": 29.857006774433824,
+      "pred_adm_next": 0.33023794425325254,
+      "pred_icu_next": 0.12093830379480341,
+      "pred_vent_next": 1.4649541255733294,
+      "capacity_score": 10.0,
+      "readiness_index": 0.6,
+      "total_score": 9.103149621180798,
+      "assigned_critical": 0,
+      "assigned_stable": 2,
+      "recommendation": {
+        "extra_doctors": 0,
+        "extra_specialists": 0,
+        "icu_short": 0,
+        "vent_short": 1,
+        "oxygen_cylinders": 1,
+        "blood_units": 1,
+        "trauma_kits": 0,
+        "urgency": "HIGH"
+      },
+      "assign_patients": 2
+    }
+  ],
+  "generated_at": "2025-10-18T02:32:16",
+  "action_plan": {
+    "incident_location": "Borivali",
+    "scenario": "outbreak",
+    "summary": {
+      "total_patients": 27,
+      "total_critical": 9,
+      "total_stable": 18,
+      "hospitals_used": 5
+    },
+    "ambulance_dispatch": [
+      {
+        "hospital_id": "H12",
+        "hospital_name": "Wockhardt Hospital",
+        "critical": 3,
+        "stable": 4,
+        "distance_km": 5.92237313539757,
+        "travel_min": 11.84474627079514
+      },
+      {
+        "hospital_id": "H10",
+        "hospital_name": "Fortis Hospital Mulund",
+        "critical": 3,
+        "stable": 4,
+        "distance_km": 11.314812490281458,
+        "travel_min": 22.629624980562916
+      },
+      {
+        "hospital_id": "H9",
+        "hospital_name": "Hiranandani Hospital",
+        "critical": 3,
+        "stable": 4,
+        "distance_km": 13.33902556097002,
+        "travel_min": 26.67805112194004
+      },
+      {
+        "hospital_id": "H11",
+        "hospital_name": "SevenHills Hospital",
+        "critical": 0,
+        "stable": 4,
+        "distance_km": 13.921534551173037,
+        "travel_min": 27.843069102346075
+      },
+      {
+        "hospital_id": "H5",
+        "hospital_name": "Nanavati Hospital",
+        "critical": 0,
+        "stable": 2,
+        "distance_km": 14.928503387216912,
+        "travel_min": 29.857006774433824
+      }
+    ],
+    "hospital_alerts": [
+      {
+        "hospital_id": "H12",
+        "hospital_name": "Wockhardt Hospital",
+        "message": "Notify Wockhardt Hospital (H12) of incoming patients: 3 critical, 4 stable"
+      },
+      {
+        "hospital_id": "H10",
+        "hospital_name": "Fortis Hospital Mulund",
+        "message": "Notify Fortis Hospital Mulund (H10) of incoming patients: 3 critical, 4 stable"
+      },
+      {
+        "hospital_id": "H9",
+        "hospital_name": "Hiranandani Hospital",
+        "message": "Notify Hiranandani Hospital (H9) of incoming patients: 3 critical, 4 stable"
+      },
+      {
+        "hospital_id": "H11",
+        "hospital_name": "SevenHills Hospital",
+        "message": "Notify SevenHills Hospital (H11) of incoming patients: 0 critical, 4 stable"
+      },
+      {
+        "hospital_id": "H5",
+        "hospital_name": "Nanavati Hospital",
+        "message": "Notify Nanavati Hospital (H5) of incoming patients: 0 critical, 2 stable"
+      }
+    ],
+    "staff_actions": [
+      {
+        "hospital_id": "H12",
+        "hospital_name": "Wockhardt Hospital",
+        "action": "Prepare ER teams at Wockhardt Hospital (H12)"
+      },
+      {
+        "hospital_id": "H12",
+        "hospital_name": "Wockhardt Hospital",
+        "action": "Mobilize +2 specialists to Wockhardt Hospital"
+      },
+      {
+        "hospital_id": "H12",
+        "hospital_name": "Wockhardt Hospital",
+        "action": "Ensure 1 ventilators available at Wockhardt Hospital"
+      },
+      {
+        "hospital_id": "H12",
+        "hospital_name": "Wockhardt Hospital",
+        "action": "Prepare supplies: 2 O2 cylinders, 7 blood units, 5 trauma kits at Wockhardt Hospital"
+      },
+      {
+        "hospital_id": "H12",
+        "hospital_name": "Wockhardt Hospital",
+        "action": "Urgency: HIGH — escalate to hospital command"
+      },
+      {
+        "hospital_id": "H10",
+        "hospital_name": "Fortis Hospital Mulund",
+        "action": "Prepare ER teams at Fortis Hospital Mulund (H10)"
+      },
+      {
+        "hospital_id": "H10",
+        "hospital_name": "Fortis Hospital Mulund",
+        "action": "Mobilize +2 specialists to Fortis Hospital Mulund"
+      },
+      {
+        "hospital_id": "H10",
+        "hospital_name": "Fortis Hospital Mulund",
+        "action": "Ensure 1 ventilators available at Fortis Hospital Mulund"
+      },
+      {
+        "hospital_id": "H10",
+        "hospital_name": "Fortis Hospital Mulund",
+        "action": "Prepare supplies: 2 O2 cylinders, 7 blood units, 5 trauma kits at Fortis Hospital Mulund"
+      },
+      {
+        "hospital_id": "H10",
+        "hospital_name": "Fortis Hospital Mulund",
+        "action": "Urgency: HIGH — escalate to hospital command"
+      },
+      {
+        "hospital_id": "H9",
+        "hospital_name": "Hiranandani Hospital",
+        "action": "Prepare ER teams at Hiranandani Hospital (H9)"
+      },
+      {
+        "hospital_id": "H9",
+        "hospital_name": "Hiranandani Hospital",
+        "action": "Mobilize +2 specialists to Hiranandani Hospital"
+      },
+      {
+        "hospital_id": "H9",
+        "hospital_name": "Hiranandani Hospital",
+        "action": "Prepare supplies: 2 O2 cylinders, 7 blood units, 5 trauma kits at Hiranandani Hospital"
+      },
+      {
+        "hospital_id": "H9",
+        "hospital_name": "Hiranandani Hospital",
+        "action": "Urgency: HIGH — escalate to hospital command"
+      },
+      {
+        "hospital_id": "H11",
+        "hospital_name": "SevenHills Hospital",
+        "action": "Prepare ER teams at SevenHills Hospital (H11)"
+      },
+      {
+        "hospital_id": "H11",
+        "hospital_name": "SevenHills Hospital",
+        "action": "Ensure 1 ventilators available at SevenHills Hospital"
+      },
+      {
+        "hospital_id": "H11",
+        "hospital_name": "SevenHills Hospital",
+        "action": "Prepare supplies: 1 O2 cylinders, 1 blood units at SevenHills Hospital"
+      },
+      {
+        "hospital_id": "H11",
+        "hospital_name": "SevenHills Hospital",
+        "action": "Urgency: HIGH — escalate to hospital command"
+      },
+      {
+        "hospital_id": "H5",
+        "hospital_name": "Nanavati Hospital",
+        "action": "Prepare ER teams at Nanavati Hospital (H5)"
+      },
+      {
+        "hospital_id": "H5",
+        "hospital_name": "Nanavati Hospital",
+        "action": "Ensure 1 ventilators available at Nanavati Hospital"
+      },
+      {
+        "hospital_id": "H5",
+        "hospital_name": "Nanavati Hospital",
+        "action": "Prepare supplies: 1 O2 cylinders, 1 blood units at Nanavati Hospital"
+      },
+      {
+        "hospital_id": "H5",
+        "hospital_name": "Nanavati Hospital",
+        "action": "Urgency: HIGH — escalate to hospital command"
+      },
+      {
+        "hospital_id": "ALL",
+        "hospital_name": "ALL",
+        "action": "Activate infection control and isolation wards"
+      }
+    ],
+    "public_advisory": "Outbreak detected. Wear masks, practice hand hygiene and avoid unnecessary hospital visits.",
+    "generated_at": "2025-10-18T02:32:16",
+    "action_plan_generated_at": "2025-10-18T02:32:16"
+  }
+}

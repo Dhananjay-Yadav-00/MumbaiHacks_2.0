@@ -1,0 +1,144 @@
+{
+  "incident_location": "Kurla",
+  "scenario": "normal",
+  "total_critical": 2,
+  "total_stable": 6,
+  "assignments": [
+    {
+      "hospital_id": "H2",
+      "hospital_name": "Sion Hospital",
+      "distance_km": 3.229109770202139,
+      "travel_min": 6.458219540404278,
+      "pred_adm_next": 0.3675150663917763,
+      "pred_icu_next": 0.11826753667872378,
+      "pred_vent_next": 0.062347550270872486,
+      "capacity_score": 10.0,
+      "readiness_index": 0.6,
+      "total_score": 2.0909688753996387,
+      "assigned_critical": 2,
+      "assigned_stable": 4,
+      "recommendation": {
+        "extra_doctors": 0,
+        "extra_specialists": 1,
+        "icu_short": 0,
+        "vent_short": 0,
+        "oxygen_cylinders": 2,
+        "blood_units": 5,
+        "trauma_kits": 3,
+        "urgency": "HIGH"
+      },
+      "assign_patients": 6
+    },
+    {
+      "hospital_id": "H11",
+      "hospital_name": "SevenHills Hospital",
+      "distance_km": 4.496990081762506,
+      "travel_min": 8.993980163525013,
+      "pred_adm_next": 0.19653930706959433,
+      "pred_icu_next": 0.1703843931699731,
+      "pred_vent_next": 1.503080107572989,
+      "capacity_score": 10.0,
+      "readiness_index": 0.6,
+      "total_score": 2.8175019104714227,
+      "assigned_critical": 0,
+      "assigned_stable": 2,
+      "recommendation": {
+        "extra_doctors": 0,
+        "extra_specialists": 0,
+        "icu_short": 0,
+        "vent_short": 1,
+        "oxygen_cylinders": 1,
+        "blood_units": 1,
+        "trauma_kits": 0,
+        "urgency": "HIGH"
+      },
+      "assign_patients": 2
+    }
+  ],
+  "generated_at": "2025-10-18T02:30:19",
+  "action_plan": {
+    "incident_location": "Kurla",
+    "scenario": "normal",
+    "summary": {
+      "total_patients": 8,
+      "total_critical": 2,
+      "total_stable": 6,
+      "hospitals_used": 2
+    },
+    "ambulance_dispatch": [
+      {
+        "hospital_id": "H2",
+        "hospital_name": "Sion Hospital",
+        "critical": 2,
+        "stable": 4,
+        "distance_km": 3.229109770202139,
+        "travel_min": 6.458219540404278
+      },
+      {
+        "hospital_id": "H11",
+        "hospital_name": "SevenHills Hospital",
+        "critical": 0,
+        "stable": 2,
+        "distance_km": 4.496990081762506,
+        "travel_min": 8.993980163525013
+      }
+    ],
+    "hospital_alerts": [
+      {
+        "hospital_id": "H2",
+        "hospital_name": "Sion Hospital",
+        "message": "Notify Sion Hospital (H2) of incoming patients: 2 critical, 4 stable"
+      },
+      {
+        "hospital_id": "H11",
+        "hospital_name": "SevenHills Hospital",
+        "message": "Notify SevenHills Hospital (H11) of incoming patients: 0 critical, 2 stable"
+      }
+    ],
+    "staff_actions": [
+      {
+        "hospital_id": "H2",
+        "hospital_name": "Sion Hospital",
+        "action": "Prepare ER teams at Sion Hospital (H2)"
+      },
+      {
+        "hospital_id": "H2",
+        "hospital_name": "Sion Hospital",
+        "action": "Mobilize +1 specialists to Sion Hospital"
+      },
+      {
+        "hospital_id": "H2",
+        "hospital_name": "Sion Hospital",
+        "action": "Prepare supplies: 2 O2 cylinders, 5 blood units, 3 trauma kits at Sion Hospital"
+      },
+      {
+        "hospital_id": "H2",
+        "hospital_name": "Sion Hospital",
+        "action": "Urgency: HIGH — escalate to hospital command"
+      },
+      {
+        "hospital_id": "H11",
+        "hospital_name": "SevenHills Hospital",
+        "action": "Prepare ER teams at SevenHills Hospital (H11)"
+      },
+      {
+        "hospital_id": "H11",
+        "hospital_name": "SevenHills Hospital",
+        "action": "Ensure 1 ventilators available at SevenHills Hospital"
+      },
+      {
+        "hospital_id": "H11",
+        "hospital_name": "SevenHills Hospital",
+        "action": "Prepare supplies: 1 O2 cylinders, 1 blood units at SevenHills Hospital"
+      },
+      {
+        "hospital_id": "H11",
+        "hospital_name": "SevenHills Hospital",
+        "action": "Urgency: HIGH — escalate to hospital command"
+      }
+    ],
+    "public_advisory": "Moderate surge expected. Minimize hospital visits if possible.",
+    "generated_at": "2025-10-18T02:30:19",
+    "action_plan_generated_at": "2025-10-18T02:30:19"
+  }
+}

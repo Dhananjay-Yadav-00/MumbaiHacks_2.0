@@ -1,0 +1,114 @@
+/* src/SharedStyles.css */
+
+/* --- Card Styles --- */
+.card {
+  background-color: var(--color-card-bg);
+  border-radius: var(--border-radius-card);
+  box-shadow: var(--shadow-light);
+  padding: 2rem;
+  max-width: 500px;
+  width: 100%;
+  margin: 2rem auto; /* Centered */
+}
+
+.card-header {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.card-header .icon {
+  font-size: 3rem;
+  color: var(--color-primary);
+  margin-bottom: 0.5rem;
+}
+
+.card-header h2 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--color-text-dark);
+  margin-bottom: 0.5rem;
+}
+
+.card-header p {
+  color: #6c757d;
+  font-size: 0.95rem;
+}
+
+/* --- Form Group Styling --- */
+.form-group {
+  margin-bottom: 1.25rem;
+}
+
+.form-group label {
+  display: block;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  color: var(--color-text-dark);
+  font-size: 0.9rem;
+}
+
+.form-group input[type="text"],
+.form-group input[type="number"],
+.form-group input[type="email"],
+.form-group input[type="password"],
+.form-group select {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid var(--color-border-light);
+  border-radius: var(--border-radius-input);
+  font-family: inherit;
+  font-size: 1rem;
+  color: var(--color-text-dark);
+  background-color: #f9fafb; /* Lighter input background */
+  transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  outline: none;
+  border-color: var(--color-accent-blue);
+  box-shadow: 0 0 0 3px rgba(56, 161, 247, 0.2); /* Soft blue focus glow */
+}
+
+/* --- Primary Button --- */
+.primary-button {
+  background: var(--gradient-orange-red);
+  color: var(--color-text-light);
+  padding: 12px 28px;
+  border-radius: var(--border-radius-button);
+  font-weight: 600;
+  font-size: 1rem;
+  box-shadow: var(--shadow-light);
+  transition: var(--transition-medium);
+  width: 100%; /* Default for form buttons */
+}
+
+.primary-button:hover {
+  opacity: 0.95;
+  box-shadow: 0px 6px 20px rgba(255, 107, 107, 0.4);
+  transform: translateY(-2px);
+}
+
+/* --- Secondary Button (Outline/Ghost) --- */
+.secondary-button {
+  background: none;
+  border: 1px solid var(--color-primary);
+  color: var(--color-primary);
+  padding: 12px 28px;
+  border-radius: var(--border-radius-button);
+  font-weight: 600;
+  font-size: 1rem;
+  transition: var(--transition-medium);
+}
+
+.secondary-button:hover {
+  background-color: var(--color-primary);
+  color: var(--color-text-light);
+  box-shadow: var(--shadow-light);
+  transform: translateY(-2px);
+}
+
+/* Small helper classes */
+.text-center { text-align: center; }
+.mt-4 { margin-top: 1rem; }
+.mb-4 { margin-bottom: 1rem; }

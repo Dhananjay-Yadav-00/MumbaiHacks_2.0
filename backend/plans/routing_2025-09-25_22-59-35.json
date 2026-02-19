@@ -1,0 +1,139 @@
+{
+  "incident_location": "khar west",
+  "scenario": "normal",
+  "total_critical": 3,
+  "total_stable": 5,
+  "assignments": [
+    {
+      "hospital_id": "H5",
+      "hospital_name": "Nanavati Hospital",
+      "distance_km": 1.6224816937713933,
+      "travel_min": 3.2449633875427866,
+      "pred_adm_next": 0.35851784995251057,
+      "pred_icu_next": 0.07237023665234915,
+      "pred_vent_next": 1.4512947968420453,
+      "capacity_score": 10.0,
+      "readiness_index": 0.6,
+      "total_score": 1.125192586253338,
+      "assigned_critical": 3,
+      "assigned_stable": 4,
+      "recommendation": {
+        "extra_doctors": 0,
+        "extra_specialists": 2,
+        "icu_short": 0,
+        "vent_short": 1,
+        "oxygen_cylinders": 2,
+        "blood_units": 7,
+        "trauma_kits": 5,
+        "urgency": "HIGH"
+      },
+      "assign_patients": 7
+    },
+    {
+      "hospital_id": "H3",
+      "hospital_name": "Lilavati Hospital",
+      "distance_km": 3.3143947795998083,
+      "travel_min": 6.628789559199617,
+      "pred_adm_next": 0.3721344049947371,
+      "pred_icu_next": 0.19103811358361736,
+      "pred_vent_next": -0.023915166221183753,
+      "capacity_score": 10.0,
+      "readiness_index": 0.6,
+      "total_score": 2.1430637487588324,
+      "assigned_critical": 0,
+      "assigned_stable": 1,
+      "recommendation": {
+        "extra_doctors": 0,
+        "extra_specialists": 0,
+        "icu_short": 0,
+        "vent_short": 0,
+        "oxygen_cylinders": 1,
+        "blood_units": 1,
+        "trauma_kits": 0,
+        "urgency": "LOW"
+      },
+      "assign_patients": 1
+    }
+  ],
+  "generated_at": "2025-09-25T22:58:48",
+  "action_plan": {
+    "incident_location": "khar west",
+    "scenario": "normal",
+    "summary": {
+      "total_patients": 8,
+      "total_critical": 3,
+      "total_stable": 5,
+      "hospitals_used": 2
+    },
+    "ambulance_dispatch": [
+      {
+        "hospital_id": "H5",
+        "hospital_name": "Nanavati Hospital",
+        "critical": 3,
+        "stable": 4,
+        "distance_km": 1.6224816937713933,
+        "travel_min": 3.2449633875427866
+      },
+      {
+        "hospital_id": "H3",
+        "hospital_name": "Lilavati Hospital",
+        "critical": 0,
+        "stable": 1,
+        "distance_km": 3.3143947795998083,
+        "travel_min": 6.628789559199617
+      }
+    ],
+    "hospital_alerts": [
+      {
+        "hospital_id": "H5",
+        "hospital_name": "Nanavati Hospital",
+        "message": "Notify Nanavati Hospital (H5) of incoming patients: 3 critical, 4 stable"
+      },
+      {
+        "hospital_id": "H3",
+        "hospital_name": "Lilavati Hospital",
+        "message": "Notify Lilavati Hospital (H3) of incoming patients: 0 critical, 1 stable"
+      }
+    ],
+    "staff_actions": [
+      {
+        "hospital_id": "H5",
+        "hospital_name": "Nanavati Hospital",
+        "action": "Prepare ER teams at Nanavati Hospital (H5)"
+      },
+      {
+        "hospital_id": "H5",
+        "hospital_name": "Nanavati Hospital",
+        "action": "Mobilize +2 specialists to Nanavati Hospital"
+      },
+      {
+        "hospital_id": "H5",
+        "hospital_name": "Nanavati Hospital",
+        "action": "Ensure 1 ventilators available at Nanavati Hospital"
+      },
+      {
+        "hospital_id": "H5",
+        "hospital_name": "Nanavati Hospital",
+        "action": "Prepare supplies: 2 O2 cylinders, 7 blood units, 5 trauma kits at Nanavati Hospital"
+      },
+      {
+        "hospital_id": "H5",
+        "hospital_name": "Nanavati Hospital",
+        "action": "Urgency: HIGH — escalate to hospital command"
+      },
+      {
+        "hospital_id": "H3",
+        "hospital_name": "Lilavati Hospital",
+        "action": "Prepare ER teams at Lilavati Hospital (H3)"
+      },
+      {
+        "hospital_id": "H3",
+        "hospital_name": "Lilavati Hospital",
+        "action": "Prepare supplies: 1 O2 cylinders, 1 blood units at Lilavati Hospital"
+      }
+    ],
+    "public_advisory": "Moderate surge expected. Minimize hospital visits if possible.",
+    "generated_at": "2025-09-25T22:58:48",
+    "action_plan_generated_at": "2025-09-25T22:59:35"
+  }
+}

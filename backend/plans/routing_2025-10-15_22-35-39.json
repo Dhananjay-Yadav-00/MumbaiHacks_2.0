@@ -1,0 +1,144 @@
+{
+  "incident_location": "Worli",
+  "scenario": "normal",
+  "total_critical": 3,
+  "total_stable": 6,
+  "assignments": [
+    {
+      "hospital_id": "H1",
+      "hospital_name": "KEM Hospital",
+      "distance_km": 2.7637488178315297,
+      "travel_min": 5.527497635663059,
+      "pred_adm_next": 0.2722664721626511,
+      "pred_icu_next": 0.10847625942865712,
+      "pred_vent_next": 0.09357455790533382,
+      "capacity_score": 10.0,
+      "readiness_index": 0.6,
+      "total_score": 1.792702585131448,
+      "assigned_critical": 3,
+      "assigned_stable": 4,
+      "recommendation": {
+        "extra_doctors": 0,
+        "extra_specialists": 2,
+        "icu_short": 0,
+        "vent_short": 0,
+        "oxygen_cylinders": 2,
+        "blood_units": 7,
+        "trauma_kits": 5,
+        "urgency": "HIGH"
+      },
+      "assign_patients": 7
+    },
+    {
+      "hospital_id": "H4",
+      "hospital_name": "Hinduja Hospital",
+      "distance_km": 3.5726294257381466,
+      "travel_min": 7.145258851476293,
+      "pred_adm_next": 0.33447150328930103,
+      "pred_icu_next": 0.08734983111303665,
+      "pred_vent_next": 1.424286005863328,
+      "capacity_score": 10.0,
+      "readiness_index": 0.6,
+      "total_score": 2.2904719561007485,
+      "assigned_critical": 0,
+      "assigned_stable": 2,
+      "recommendation": {
+        "extra_doctors": 0,
+        "extra_specialists": 0,
+        "icu_short": 0,
+        "vent_short": 1,
+        "oxygen_cylinders": 1,
+        "blood_units": 1,
+        "trauma_kits": 0,
+        "urgency": "HIGH"
+      },
+      "assign_patients": 2
+    }
+  ],
+  "generated_at": "2025-10-15T22:33:53",
+  "action_plan": {
+    "incident_location": "Worli",
+    "scenario": "normal",
+    "summary": {
+      "total_patients": 9,
+      "total_critical": 3,
+      "total_stable": 6,
+      "hospitals_used": 2
+    },
+    "ambulance_dispatch": [
+      {
+        "hospital_id": "H1",
+        "hospital_name": "KEM Hospital",
+        "critical": 3,
+        "stable": 4,
+        "distance_km": 2.7637488178315297,
+        "travel_min": 5.527497635663059
+      },
+      {
+        "hospital_id": "H4",
+        "hospital_name": "Hinduja Hospital",
+        "critical": 0,
+        "stable": 2,
+        "distance_km": 3.5726294257381466,
+        "travel_min": 7.145258851476293
+      }
+    ],
+    "hospital_alerts": [
+      {
+        "hospital_id": "H1",
+        "hospital_name": "KEM Hospital",
+        "message": "Notify KEM Hospital (H1) of incoming patients: 3 critical, 4 stable"
+      },
+      {
+        "hospital_id": "H4",
+        "hospital_name": "Hinduja Hospital",
+        "message": "Notify Hinduja Hospital (H4) of incoming patients: 0 critical, 2 stable"
+      }
+    ],
+    "staff_actions": [
+      {
+        "hospital_id": "H1",
+        "hospital_name": "KEM Hospital",
+        "action": "Prepare ER teams at KEM Hospital (H1)"
+      },
+      {
+        "hospital_id": "H1",
+        "hospital_name": "KEM Hospital",
+        "action": "Mobilize +2 specialists to KEM Hospital"
+      },
+      {
+        "hospital_id": "H1",
+        "hospital_name": "KEM Hospital",
+        "action": "Prepare supplies: 2 O2 cylinders, 7 blood units, 5 trauma kits at KEM Hospital"
+      },
+      {
+        "hospital_id": "H1",
+        "hospital_name": "KEM Hospital",
+        "action": "Urgency: HIGH — escalate to hospital command"
+      },
+      {
+        "hospital_id": "H4",
+        "hospital_name": "Hinduja Hospital",
+        "action": "Prepare ER teams at Hinduja Hospital (H4)"
+      },
+      {
+        "hospital_id": "H4",
+        "hospital_name": "Hinduja Hospital",
+        "action": "Ensure 1 ventilators available at Hinduja Hospital"
+      },
+      {
+        "hospital_id": "H4",
+        "hospital_name": "Hinduja Hospital",
+        "action": "Prepare supplies: 1 O2 cylinders, 1 blood units at Hinduja Hospital"
+      },
+      {
+        "hospital_id": "H4",
+        "hospital_name": "Hinduja Hospital",
+        "action": "Urgency: HIGH — escalate to hospital command"
+      }
+    ],
+    "public_advisory": "Moderate surge expected. Minimize hospital visits if possible.",
+    "generated_at": "2025-10-15T22:33:53",
+    "action_plan_generated_at": "2025-10-15T22:35:39"
+  }
+}

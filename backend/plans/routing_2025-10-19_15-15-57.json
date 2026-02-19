@@ -1,0 +1,323 @@
+{
+  "incident_location": "Thadomal Shahani Engineering College",
+  "scenario": "normal",
+  "total_critical": 12,
+  "total_stable": 18,
+  "assignments": [
+    {
+      "hospital_id": "H1",
+      "hospital_name": "KEM Hospital",
+      "distance_km": null,
+      "travel_min": 17.0,
+      "pred_adm_next": 0.2722664721626511,
+      "pred_icu_next": 0.10847625942865712,
+      "pred_vent_next": 0.09357455790533382,
+      "capacity_score": 10.0,
+      "readiness_index": 0.6,
+      "total_score": 5.23445329443253,
+      "assigned_critical": 3,
+      "assigned_stable": 4,
+      "recommendation": {
+        "extra_doctors": 0,
+        "extra_specialists": 2,
+        "icu_short": 0,
+        "vent_short": 0,
+        "oxygen_cylinders": 2,
+        "blood_units": 7,
+        "trauma_kits": 5,
+        "urgency": "HIGH"
+      },
+      "assign_patients": 7
+    },
+    {
+      "hospital_id": "H3",
+      "hospital_name": "Lilavati Hospital",
+      "distance_km": null,
+      "travel_min": 18.0,
+      "pred_adm_next": 0.35077738198709685,
+      "pred_icu_next": 0.22298720802526936,
+      "pred_vent_next": 0.1293296433593289,
+      "capacity_score": 10.0,
+      "readiness_index": 0.6,
+      "total_score": 5.550155476397419,
+      "assigned_critical": 3,
+      "assigned_stable": 4,
+      "recommendation": {
+        "extra_doctors": 0,
+        "extra_specialists": 2,
+        "icu_short": 0,
+        "vent_short": 0,
+        "oxygen_cylinders": 2,
+        "blood_units": 7,
+        "trauma_kits": 5,
+        "urgency": "HIGH"
+      },
+      "assign_patients": 7
+    },
+    {
+      "hospital_id": "H2",
+      "hospital_name": "Sion Hospital",
+      "distance_km": null,
+      "travel_min": 18.0,
+      "pred_adm_next": 0.3675150663917763,
+      "pred_icu_next": 0.11826753667872378,
+      "pred_vent_next": 0.062347550270872486,
+      "capacity_score": 10.0,
+      "readiness_index": 0.6,
+      "total_score": 5.5535030132783545,
+      "assigned_critical": 3,
+      "assigned_stable": 4,
+      "recommendation": {
+        "extra_doctors": 0,
+        "extra_specialists": 2,
+        "icu_short": 0,
+        "vent_short": 0,
+        "oxygen_cylinders": 2,
+        "blood_units": 7,
+        "trauma_kits": 5,
+        "urgency": "HIGH"
+      },
+      "assign_patients": 7
+    },
+    {
+      "hospital_id": "H10",
+      "hospital_name": "Fortis Hospital Mulund",
+      "distance_km": null,
+      "travel_min": 21.0,
+      "pred_adm_next": 0.33688595288253975,
+      "pred_icu_next": 0.1799946647100766,
+      "pred_vent_next": 1.4062251232278027,
+      "capacity_score": 10.0,
+      "readiness_index": 0.6,
+      "total_score": 6.447377190576508,
+      "assigned_critical": 3,
+      "assigned_stable": 4,
+      "recommendation": {
+        "extra_doctors": 0,
+        "extra_specialists": 2,
+        "icu_short": 0,
+        "vent_short": 1,
+        "oxygen_cylinders": 2,
+        "blood_units": 7,
+        "trauma_kits": 5,
+        "urgency": "HIGH"
+      },
+      "assign_patients": 7
+    },
+    {
+      "hospital_id": "H6",
+      "hospital_name": "Breach Candy Hospital",
+      "distance_km": null,
+      "travel_min": 22.0,
+      "pred_adm_next": 0.2855122087364909,
+      "pred_icu_next": 0.1396725780757846,
+      "pred_vent_next": 1.2569093704371817,
+      "capacity_score": 10.0,
+      "readiness_index": 0.6,
+      "total_score": 6.7371024417472976,
+      "assigned_critical": 0,
+      "assigned_stable": 2,
+      "recommendation": {
+        "extra_doctors": 0,
+        "extra_specialists": 0,
+        "icu_short": 0,
+        "vent_short": 1,
+        "oxygen_cylinders": 1,
+        "blood_units": 1,
+        "trauma_kits": 0,
+        "urgency": "HIGH"
+      },
+      "assign_patients": 2
+    }
+  ],
+  "generated_at": "2025-10-19T15:15:57",
+  "action_plan": {
+    "incident_location": "Thadomal Shahani Engineering College",
+    "scenario": "normal",
+    "summary": {
+      "total_patients": 30,
+      "total_critical": 12,
+      "total_stable": 18,
+      "hospitals_used": 5
+    },
+    "ambulance_dispatch": [
+      {
+        "hospital_id": "H1",
+        "hospital_name": "KEM Hospital",
+        "critical": 3,
+        "stable": 4,
+        "distance_km": null,
+        "travel_min": 17.0
+      },
+      {
+        "hospital_id": "H3",
+        "hospital_name": "Lilavati Hospital",
+        "critical": 3,
+        "stable": 4,
+        "distance_km": null,
+        "travel_min": 18.0
+      },
+      {
+        "hospital_id": "H2",
+        "hospital_name": "Sion Hospital",
+        "critical": 3,
+        "stable": 4,
+        "distance_km": null,
+        "travel_min": 18.0
+      },
+      {
+        "hospital_id": "H10",
+        "hospital_name": "Fortis Hospital Mulund",
+        "critical": 3,
+        "stable": 4,
+        "distance_km": null,
+        "travel_min": 21.0
+      },
+      {
+        "hospital_id": "H6",
+        "hospital_name": "Breach Candy Hospital",
+        "critical": 0,
+        "stable": 2,
+        "distance_km": null,
+        "travel_min": 22.0
+      }
+    ],
+    "hospital_alerts": [
+      {
+        "hospital_id": "H1",
+        "hospital_name": "KEM Hospital",
+        "message": "Notify KEM Hospital (H1) of incoming patients: 3 critical, 4 stable"
+      },
+      {
+        "hospital_id": "H3",
+        "hospital_name": "Lilavati Hospital",
+        "message": "Notify Lilavati Hospital (H3) of incoming patients: 3 critical, 4 stable"
+      },
+      {
+        "hospital_id": "H2",
+        "hospital_name": "Sion Hospital",
+        "message": "Notify Sion Hospital (H2) of incoming patients: 3 critical, 4 stable"
+      },
+      {
+        "hospital_id": "H10",
+        "hospital_name": "Fortis Hospital Mulund",
+        "message": "Notify Fortis Hospital Mulund (H10) of incoming patients: 3 critical, 4 stable"
+      },
+      {
+        "hospital_id": "H6",
+        "hospital_name": "Breach Candy Hospital",
+        "message": "Notify Breach Candy Hospital (H6) of incoming patients: 0 critical, 2 stable"
+      }
+    ],
+    "staff_actions": [
+      {
+        "hospital_id": "H1",
+        "hospital_name": "KEM Hospital",
+        "action": "Prepare ER teams at KEM Hospital (H1)"
+      },
+      {
+        "hospital_id": "H1",
+        "hospital_name": "KEM Hospital",
+        "action": "Mobilize +2 specialists to KEM Hospital"
+      },
+      {
+        "hospital_id": "H1",
+        "hospital_name": "KEM Hospital",
+        "action": "Prepare supplies: 2 O2 cylinders, 7 blood units, 5 trauma kits at KEM Hospital"
+      },
+      {
+        "hospital_id": "H1",
+        "hospital_name": "KEM Hospital",
+        "action": "Urgency: HIGH — escalate to hospital command"
+      },
+      {
+        "hospital_id": "H3",
+        "hospital_name": "Lilavati Hospital",
+        "action": "Prepare ER teams at Lilavati Hospital (H3)"
+      },
+      {
+        "hospital_id": "H3",
+        "hospital_name": "Lilavati Hospital",
+        "action": "Mobilize +2 specialists to Lilavati Hospital"
+      },
+      {
+        "hospital_id": "H3",
+        "hospital_name": "Lilavati Hospital",
+        "action": "Prepare supplies: 2 O2 cylinders, 7 blood units, 5 trauma kits at Lilavati Hospital"
+      },
+      {
+        "hospital_id": "H3",
+        "hospital_name": "Lilavati Hospital",
+        "action": "Urgency: HIGH — escalate to hospital command"
+      },
+      {
+        "hospital_id": "H2",
+        "hospital_name": "Sion Hospital",
+        "action": "Prepare ER teams at Sion Hospital (H2)"
+      },
+      {
+        "hospital_id": "H2",
+        "hospital_name": "Sion Hospital",
+        "action": "Mobilize +2 specialists to Sion Hospital"
+      },
+      {
+        "hospital_id": "H2",
+        "hospital_name": "Sion Hospital",
+        "action": "Prepare supplies: 2 O2 cylinders, 7 blood units, 5 trauma kits at Sion Hospital"
+      },
+      {
+        "hospital_id": "H2",
+        "hospital_name": "Sion Hospital",
+        "action": "Urgency: HIGH — escalate to hospital command"
+      },
+      {
+        "hospital_id": "H10",
+        "hospital_name": "Fortis Hospital Mulund",
+        "action": "Prepare ER teams at Fortis Hospital Mulund (H10)"
+      },
+      {
+        "hospital_id": "H10",
+        "hospital_name": "Fortis Hospital Mulund",
+        "action": "Mobilize +2 specialists to Fortis Hospital Mulund"
+      },
+      {
+        "hospital_id": "H10",
+        "hospital_name": "Fortis Hospital Mulund",
+        "action": "Ensure 1 ventilators available at Fortis Hospital Mulund"
+      },
+      {
+        "hospital_id": "H10",
+        "hospital_name": "Fortis Hospital Mulund",
+        "action": "Prepare supplies: 2 O2 cylinders, 7 blood units, 5 trauma kits at Fortis Hospital Mulund"
+      },
+      {
+        "hospital_id": "H10",
+        "hospital_name": "Fortis Hospital Mulund",
+        "action": "Urgency: HIGH — escalate to hospital command"
+      },
+      {
+        "hospital_id": "H6",
+        "hospital_name": "Breach Candy Hospital",
+        "action": "Prepare ER teams at Breach Candy Hospital (H6)"
+      },
+      {
+        "hospital_id": "H6",
+        "hospital_name": "Breach Candy Hospital",
+        "action": "Ensure 1 ventilators available at Breach Candy Hospital"
+      },
+      {
+        "hospital_id": "H6",
+        "hospital_name": "Breach Candy Hospital",
+        "action": "Prepare supplies: 1 O2 cylinders, 1 blood units at Breach Candy Hospital"
+      },
+      {
+        "hospital_id": "H6",
+        "hospital_name": "Breach Candy Hospital",
+        "action": "Urgency: HIGH — escalate to hospital command"
+      }
+    ],
+    "public_advisory": "Moderate surge expected. Minimize hospital visits if possible.",
+    "generated_at": "2025-10-19T15:15:57",
+    "action_plan_generated_at": "2025-10-19T15:15:57"
+  }
+}

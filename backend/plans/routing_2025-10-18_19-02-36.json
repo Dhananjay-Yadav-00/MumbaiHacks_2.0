@@ -1,0 +1,149 @@
+{
+  "incident_location": "Bandra",
+  "scenario": "normal",
+  "total_critical": 4,
+  "total_stable": 7,
+  "assignments": [
+    {
+      "hospital_id": "H3",
+      "hospital_name": "Lilavati Hospital",
+      "distance_km": 1.127515831064466,
+      "travel_min": 3.0,
+      "pred_adm_next": 0.35077738198709685,
+      "pred_icu_next": 0.22298720802526936,
+      "pred_vent_next": 0.1293296433593289,
+      "capacity_score": 10.0,
+      "readiness_index": 0.6,
+      "total_score": 1.0501554763974192,
+      "assigned_critical": 3,
+      "assigned_stable": 4,
+      "recommendation": {
+        "extra_doctors": 0,
+        "extra_specialists": 2,
+        "icu_short": 0,
+        "vent_short": 0,
+        "oxygen_cylinders": 2,
+        "blood_units": 7,
+        "trauma_kits": 5,
+        "urgency": "HIGH"
+      },
+      "assign_patients": 7
+    },
+    {
+      "hospital_id": "H4",
+      "hospital_name": "Hinduja Hospital",
+      "distance_km": 1.9018147073083873,
+      "travel_min": 3.8036294146167746,
+      "pred_adm_next": 0.33447150328930103,
+      "pred_icu_next": 0.08734983111303665,
+      "pred_vent_next": 1.424286005863328,
+      "capacity_score": 10.0,
+      "readiness_index": 0.6,
+      "total_score": 1.2879831250428926,
+      "assigned_critical": 1,
+      "assigned_stable": 3,
+      "recommendation": {
+        "extra_doctors": 0,
+        "extra_specialists": 1,
+        "icu_short": 0,
+        "vent_short": 1,
+        "oxygen_cylinders": 1,
+        "blood_units": 3,
+        "trauma_kits": 2,
+        "urgency": "HIGH"
+      },
+      "assign_patients": 4
+    }
+  ],
+  "generated_at": "2025-10-18T19:02:36",
+  "action_plan": {
+    "incident_location": "Bandra",
+    "scenario": "normal",
+    "summary": {
+      "total_patients": 11,
+      "total_critical": 4,
+      "total_stable": 7,
+      "hospitals_used": 2
+    },
+    "ambulance_dispatch": [
+      {
+        "hospital_id": "H3",
+        "hospital_name": "Lilavati Hospital",
+        "critical": 3,
+        "stable": 4,
+        "distance_km": 1.127515831064466,
+        "travel_min": 3.0
+      },
+      {
+        "hospital_id": "H4",
+        "hospital_name": "Hinduja Hospital",
+        "critical": 1,
+        "stable": 3,
+        "distance_km": 1.9018147073083873,
+        "travel_min": 3.8036294146167746
+      }
+    ],
+    "hospital_alerts": [
+      {
+        "hospital_id": "H3",
+        "hospital_name": "Lilavati Hospital",
+        "message": "Notify Lilavati Hospital (H3) of incoming patients: 3 critical, 4 stable"
+      },
+      {
+        "hospital_id": "H4",
+        "hospital_name": "Hinduja Hospital",
+        "message": "Notify Hinduja Hospital (H4) of incoming patients: 1 critical, 3 stable"
+      }
+    ],
+    "staff_actions": [
+      {
+        "hospital_id": "H3",
+        "hospital_name": "Lilavati Hospital",
+        "action": "Prepare ER teams at Lilavati Hospital (H3)"
+      },
+      {
+        "hospital_id": "H3",
+        "hospital_name": "Lilavati Hospital",
+        "action": "Mobilize +2 specialists to Lilavati Hospital"
+      },
+      {
+        "hospital_id": "H3",
+        "hospital_name": "Lilavati Hospital",
+        "action": "Prepare supplies: 2 O2 cylinders, 7 blood units, 5 trauma kits at Lilavati Hospital"
+      },
+      {
+        "hospital_id": "H3",
+        "hospital_name": "Lilavati Hospital",
+        "action": "Urgency: HIGH — escalate to hospital command"
+      },
+      {
+        "hospital_id": "H4",
+        "hospital_name": "Hinduja Hospital",
+        "action": "Prepare ER teams at Hinduja Hospital (H4)"
+      },
+      {
+        "hospital_id": "H4",
+        "hospital_name": "Hinduja Hospital",
+        "action": "Mobilize +1 specialists to Hinduja Hospital"
+      },
+      {
+        "hospital_id": "H4",
+        "hospital_name": "Hinduja Hospital",
+        "action": "Ensure 1 ventilators available at Hinduja Hospital"
+      },
+      {
+        "hospital_id": "H4",
+        "hospital_name": "Hinduja Hospital",
+        "action": "Prepare supplies: 1 O2 cylinders, 3 blood units, 2 trauma kits at Hinduja Hospital"
+      },
+      {
+        "hospital_id": "H4",
+        "hospital_name": "Hinduja Hospital",
+        "action": "Urgency: HIGH — escalate to hospital command"
+      }
+    ],
+    "public_advisory": "Moderate surge expected. Minimize hospital visits if possible.",
+    "generated_at": "2025-10-18T19:02:36",
+    "action_plan_generated_at": "2025-10-18T19:02:36"
+  }
+}

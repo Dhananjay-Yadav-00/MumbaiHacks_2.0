@@ -1,0 +1,78 @@
+{
+  "incident_location": "thane",
+  "scenario": "normal",
+  "total_critical": 3,
+  "total_stable": 7,
+  "assignments": [
+    {
+      "hospital_id": "H4",
+      "travel_min": 5,
+      "pred_adm_next": 3.046513328578123,
+      "pred_icu_next": 1.32349840731278,
+      "pred_vent_next": 1.325331706929473,
+      "capacity_score": 10.0,
+      "readiness_index": 0.6,
+      "total_score": 2.1893026657156245,
+      "assigned_critical": 3,
+      "assigned_stable": 4,
+      "recommendation": {
+        "extra_doctors": 1,
+        "extra_specialists": 2,
+        "icu_short": 1,
+        "vent_short": 1,
+        "oxygen_cylinders": 3,
+        "blood_units": 7,
+        "trauma_kits": 5,
+        "urgency": "HIGH"
+      },
+      "assign_patients": 7
+    },
+    {
+      "hospital_id": "H7",
+      "travel_min": 11,
+      "pred_adm_next": 2.125670745240909,
+      "pred_icu_next": 1.5128606446180282,
+      "pred_vent_next": 1.306609316989411,
+      "capacity_score": 10.0,
+      "readiness_index": 0.6,
+      "total_score": 3.8051341490481816,
+      "assigned_critical": 0,
+      "assigned_stable": 3,
+      "recommendation": {
+        "extra_doctors": 0,
+        "extra_specialists": 0,
+        "icu_short": 1,
+        "vent_short": 1,
+        "oxygen_cylinders": 1,
+        "blood_units": 1,
+        "trauma_kits": 0,
+        "urgency": "HIGH"
+      },
+      "assign_patients": 3
+    }
+  ],
+  "generated_at": "2025-09-02T01:32:19",
+  "action_plan": {
+    "ambulance_dispatch": [
+      {
+        "hospital_id": "H4",
+        "critical": 3,
+        "stable": 4
+      },
+      {
+        "hospital_id": "H7",
+        "critical": 0,
+        "stable": 3
+      }
+    ],
+    "hospital_alerts": [
+      "Notify H4 of incoming patients",
+      "Notify H7 of incoming patients"
+    ],
+    "staff_actions": [
+      "Prepare ER teams at H4",
+      "Prepare ER teams at H7"
+    ],
+    "public_advisory": "Moderate surge expected. Minimize hospital visits if possible."
+  }
+}

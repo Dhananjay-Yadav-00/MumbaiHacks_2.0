@@ -1,0 +1,210 @@
+.results-container {
+  max-width: 1500px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: #f8fafc;
+  color: #1e293b;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+/* Header */
+.results-header-card {
+  background: linear-gradient(145deg, #ffffff, #f3f4f6);
+  border: 1px solid #e5e7eb;
+  border-radius: 1rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  padding: 2rem;
+  text-align: center;
+  position: relative;
+}
+
+.results-header-card h3 {
+  font-size: 1.8rem;
+  color: #2563eb;
+  font-weight: 700;
+}
+
+.results-header-card .back-button {
+  position: absolute;
+  top: 1.5rem;
+  left: 1.5rem;
+  border: none;
+  background: transparent;
+  color: #2563eb;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.results-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+  gap: 2rem;
+}
+
+/* Cards */
+.result-card {
+  background: #ffffff;
+  border-radius: 1rem;
+  border: 1px solid #e5e7eb;
+  padding: 1.75rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.04);
+}
+
+.result-card h4 {
+  font-size: 1.3rem;
+  color: #2563eb;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.result-card ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+/* Actions */
+.action-groups {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 1.5rem;
+}
+
+.action-group {
+  background: #f9fafb;
+  border-left: 4px solid #2563eb;
+  border-radius: 0.75rem;
+  padding: 1rem 1.25rem;
+}
+
+/* Advisory */
+.advisory-text {
+  background: #fef3c7;
+  color: #92400e;
+  padding: 1rem 1.5rem;
+  border-left: 4px solid #f59e0b;
+  border-radius: 0.75rem;
+  font-size: 1.05rem;
+  font-weight: 500;
+}
+
+/* 🌍 Full-width Map */
+.map-section {
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  background: linear-gradient(180deg, #f9fafb 0%, #ffffff 100%);
+  padding: 3rem 0 4rem;
+  box-shadow: 0 -4px 18px rgba(0, 0, 0, 0.05);
+}
+
+.map-title {
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1e40af;
+  margin-bottom: 1.5rem;
+}
+
+.map-wrapper {
+  width: 90%;
+  max-width: 1500px;
+  margin: 0 auto;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.1);
+}
+
+.leaflet-container {
+  height: 600px !important;
+  width: 100% !important;
+}
+
+@media (max-width: 768px) {
+  .map-wrapper {
+    width: 95%;
+  }
+
+  .leaflet-container {
+    height: 400px !important;
+  }
+}
+
+/* --- NEW STYLES FOR RATIONALE CARD --- */
+
+.result-card.full-width {
+  grid-column: 1 / -1;
+  /* Makes card span full width in a grid context */
+}
+
+.rationale-card .rationale-subtitle {
+  font-size: 1rem;
+  color: #475569;
+  margin-top: -0.5rem;
+  margin-bottom: 1.5rem;
+  border-left: 4px solid #a5b4fc;
+  padding-left: 1rem;
+}
+
+.rationale-card .rationale-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.rationale-card .rationale-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background-color: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 0.75rem;
+}
+
+.rationale-card .hospital-name {
+  font-weight: 600;
+  color: #1e293b;
+}
+
+.rationale-card .hospital-score {
+  font-weight: 700;
+  color: #ffffff;
+  background-color: #2563eb;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.9rem;
+}
+
+/* ── Ambulance Tracker ── */
+.ambulance-tracker {
+  border-left-width: 5px !important;
+}
+
+.pulsing-dot {
+  display: inline-block;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  animation: amb-pulse 1.4s ease-in-out infinite;
+}
+
+@keyframes amb-pulse {
+
+  0%,
+  100% {
+    opacity: 1;
+    transform: scale(1);
+    box-shadow: 0 0 0 0 currentColor;
+  }
+
+  50% {
+    opacity: 0.7;
+    transform: scale(1.2);
+    box-shadow: 0 0 0 5px transparent;
+  }
+}

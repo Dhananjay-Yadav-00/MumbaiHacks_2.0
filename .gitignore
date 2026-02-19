@@ -1,0 +1,55 @@
+# ===================================================================
+# Python / Backend
+# ===================================================================
+
+# Virtual Environments
+/.venv
+/backend/.venv
+/backend/venv/
+
+# Python cache files
+**/__pycache__/
+
+# Generated data and plans
+# Ignoring the whole output folder is cleaner
+/backend/output/
+/backend/dataset/geocode_cache.json
+
+
+# ===================================================================
+# Node.js / Frontend
+# ===================================================================
+
+# Dependencies
+/frontend/node_modules/
+node_modules/
+
+# Build output
+/frontend/dist/
+
+# Vite-specific cache
+/frontend/.vite/
+
+# ESLint cache
+/frontend/.eslintcache
+
+
+# ===================================================================
+# General & IDE
+# ===================================================================
+
+# IDE-specific settings
+.vscode/
+
+# Environment variables (contains secret keys)
+.env*
+!/.env.example
+
+# macOS system files
+.DS_Store
+
+# Database
+/backend/hospital.db
+
+# Trained ML models (large binary files)
+/backend/models/

@@ -1,0 +1,47 @@
+hospital_id,hospital_name,latitude,longitude,er_admissions,bed_availability,ambulance_arrivals,staff_capacity,total_beds,status
+H001,KEM Hospital,19.002,72.842,65,8,9,120,250,Red
+H002,Sion Hospital,19.046,72.86,38,31,2,150,180,Yellow
+H003,Tata Memorial Hospital,19.003,72.845,78,12,11,105,200,Red
+H004,Lilavati Hospital,19.051,72.829,35,42,3,128,220,Green
+H005,Nanavati Hospital,19.096,72.84,50,22,5,112,160,Yellow
+H006,Breach Candy Hospital,18.972,72.804,18,65,1,140,140,Green
+H007,Jaslok Hospital,18.971,72.809,70,6,8,98,260,Red
+H008,P.D. Hinduja Hospital,19.033,72.838,88,4,14,90,300,Red
+H009,Kokilaben Dhirubhai Ambani Hospital,19.131,72.822,30,48,3,130,185,Green
+H010,Dr L H Hiranandani Hospital,19.119,72.917,48,25,6,115,210,Yellow
+H011,Fortis Hospital Mulund,19.161,72.943,42,30,4,125,195,Green
+H012,Sir J.J. Group of Hospitals,18.962,72.834,15,72,0,148,160,Green
+H013,H.N. Reliance Foundation Hospital,18.959,72.819,35,35,3,138,240,Green
+H014,Wockhardt Hospital,18.974,72.825,60,18,7,122,200,Yellow
+H015,Global Hospital,18.999,72.84,28,45,2,130,150,Green
+H016,Saifee Hospital,18.953,72.822,72,7,9,110,170,Red
+H017,Holy Family Hospital,19.054,72.827,20,60,1,142,165,Green
+H018,Cooper Hospital,19.108,72.836,80,5,10,100,220,Red
+H019,SevenHills Hospital,19.116,72.879,45,22,4,132,175,Yellow
+H020,Bombay Hospital,18.94,72.829,25,55,2,128,200,Green
+H021,Hinduja Healthcare Surgical,19.068,72.835,18,38,2,105,110,Green
+H022,Holy Spirit Hospital,19.123,72.865,55,16,5,120,200,Yellow
+H023,K.J. Somaiya Hospital,19.046,72.874,32,40,3,135,210,Green
+H024,Kohinoor Hospital,19.069,72.889,22,50,2,115,170,Green
+H025,Masina Hospital,18.973,72.833,12,58,1,90,120,Green
+H026,Prince Aly Khan Hospital,18.967,72.839,65,10,7,122,175,Red
+H027,S.L. Raheja Hospital,19.043,72.841,55,14,6,128,185,Yellow
+H028,St. Elizabeth's Hospital,18.955,72.815,15,62,1,100,105,Green
+H029,Sushrusha Hospital,19.025,72.838,30,38,2,108,140,Green
+H030,Wadia Hospital,19.006,72.843,55,18,5,118,200,Yellow
+H031,Bhabha Hospital,19.058,72.833,75,6,9,115,230,Red
+H032,Shatabdi Hospital,19.049,72.906,60,17,8,120,260,Yellow
+H033,Rajawadi Hospital,19.073,72.898,82,4,10,128,290,Red
+H034,V.N. Desai Hospital,19.08,72.845,38,38,3,108,175,Green
+H035,Lifeline Medicare Hospital,19.165,72.842,25,30,2,90,100,Yellow
+H036,Siddharth Hospital,19.158,72.845,42,18,4,108,150,Yellow
+H037,SRV Hospital,19.162,72.85,18,42,2,98,120,Green
+H038,Kapadia Multispeciality Hospital,19.168,72.84,22,35,2,92,105,Green
+H039,Suvidha Hospital,19.17,72.848,35,20,3,98,130,Yellow
+H040,Apollo Hospitals Navi Mumbai,19.018,73.023,55,30,8,138,250,Green
+H041,MGM Hospital Vashi,19.074,72.998,48,28,5,128,195,Yellow
+H042,D Y Patil Hospital,19.042,73.026,72,8,10,145,290,Red
+H043,Fortis Hiranandani Hospital Vashi,19.076,72.997,40,28,5,120,175,Yellow
+H044,Reliance Hospital Kopar Khairane,19.103,73.011,30,42,3,115,185,Green
+H045,Terna Speciality Hospital,19.038,73.018,38,35,4,120,220,Green
+H046,Cloudnine Hospital Vashi,19.072,72.999,20,55,2,105,160,Green

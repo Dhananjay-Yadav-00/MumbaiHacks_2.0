@@ -1,0 +1,155 @@
+/* src/components/Dashboard/Dashboard.css */
+.dashboard-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* --- Header --- */
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  background-color: var(--bg-dark-secondary);
+  border-radius: 16px;
+  border: 1px solid var(--border-color);
+}
+
+.logo {
+  font-size: 1.3rem;
+  font-weight: 800;
+}
+
+.logo span {
+  color: var(--text-accent);
+}
+
+.system-status {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.status-indicator {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.7; transform: scale(0.95); }
+}
+
+
+/* --- Welcome Banner --- */
+.welcome-banner {
+  padding: 2.5rem;
+  background: linear-gradient(135deg, #1e3a8a, #3b82f6);
+  border-radius: 16px;
+  text-align: center;
+}
+
+.welcome-banner h1 {
+  font-size: 2.2rem;
+  font-weight: 800;
+  letter-spacing: -1px;
+  margin-bottom: 0.5rem;
+  color: white;
+}
+
+.welcome-banner p {
+  font-size: 1.1rem;
+  color: #dbeafe; /* Lighter blue */
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+
+/* --- Widget Cards (Capabilities, Activity) --- */
+.widget-card {
+  background-color: var(--bg-dark-secondary);
+  border-radius: 16px;
+  border: 1px solid var(--border-color);
+  padding: 1.5rem;
+}
+
+.widget-card h3 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  color: var(--text-primary);
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 1rem;
+}
+
+/* Capabilities List */
+.capabilities-list {
+  list-style: none;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+
+.capabilities-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.capability-icon {
+  font-size: 1.75rem;
+  margin-top: -4px;
+}
+
+.capability-text strong {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+  color: var(--text-primary);
+}
+
+.capability-text span {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+}
+
+/* Activity List */
+.activity-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.activity-list li {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.75rem;
+  background-color: var(--bg-dark-primary);
+  border-radius: 10px;
+}
+
+.activity-icon {
+  font-size: 1.5rem;
+}
+
+.activity-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.activity-desc {
+  color: var(--text-primary);
+  font-weight: 500;
+}
+
+.activity-time {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+}

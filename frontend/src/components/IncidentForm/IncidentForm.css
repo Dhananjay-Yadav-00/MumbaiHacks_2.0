@@ -1,0 +1,149 @@
+/* src/components/IncidentForm/IncidentForm.css */
+.page-wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 2rem;
+  background-color: var(--color-secondary); /* Match page background */
+}
+
+/* --- Incident Form Banner (top red section) --- */
+.incident-form-banner {
+  background: var(--gradient-orange-red);
+  color: var(--color-text-light);
+  padding: 2rem;
+  border-radius: var(--border-radius-card);
+  text-align: center;
+  margin-bottom: 2rem;
+  max-width: 600px; /* Adjust as needed */
+  width: 100%;
+  box-shadow: var(--shadow-medium);
+}
+
+.incident-form-banner .banner-icon svg {
+  width: 48px;
+  height: 48px;
+  margin-bottom: 1rem;
+  color: white; /* Ensure SVG is white */
+}
+
+.incident-form-banner h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.incident-form-banner p {
+  font-size: 1rem;
+  opacity: 0.9;
+}
+
+/* --- Incident Form Card --- */
+.incident-form-card {
+  max-width: 600px;
+  width: 100%;
+  padding: 2.5rem;
+  margin-top: 0; /* Override default card margin */
+}
+
+.incident-form-card h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  color: var(--color-primary);
+  text-align: center;
+}
+
+.required {
+  color: var(--color-accent-red);
+  margin-left: 0.25rem;
+}
+
+.form-row {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.form-row .form-group {
+  flex: 1;
+}
+
+.severity-priority-tag {
+  background-color: #ffe0b2; /* Light orange */
+  color: #fb8c00; /* Darker orange */
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-top: 0.5rem;
+  display: inline-block; /* Only take content width */
+}
+
+.use-current-location {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--color-primary);
+  font-size: 0.9rem;
+  margin-top: 0.75rem;
+  cursor: pointer;
+  transition: var(--transition-fast);
+}
+
+.use-current-location:hover {
+  opacity: 0.8;
+  text-decoration: underline;
+}
+
+.use-current-location svg {
+  width: 18px;
+  height: 18px;
+  color: var(--color-primary);
+}
+
+.checkbox-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem 1.5rem;
+  margin-top: 0.5rem;
+}
+
+.checkbox-group label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 400; /* Reset label font-weight */
+  color: var(--color-text-dark);
+}
+
+.checkbox-group input[type="checkbox"] {
+  accent-color: var(--color-primary); /* Style checkbox itself */
+  width: 18px;
+  height: 18px;
+}
+
+.incident-form-card .primary-button {
+  margin-top: 2rem;
+}
+
+
+@media (max-width: 600px) {
+  .form-row {
+    flex-direction: column;
+    gap: 0; /* Remove gap when stacked */
+  }
+
+  .form-row .form-group {
+    margin-bottom: 1.25rem; /* Re-add margin between stacked groups */
+  }
+
+  .form-row .form-group:last-child {
+    margin-bottom: 0;
+  }
+
+  .incident-form-card {
+    padding: 1.5rem;
+  }
+}

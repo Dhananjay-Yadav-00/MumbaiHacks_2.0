@@ -1,0 +1,41 @@
+/* src/App.css */
+/* Main app layout is now handled by individual pages and global index.css */
+
+.page-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 2rem;
+  text-align: center;
+}
+
+.page-container h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: var(--color-primary);
+}
+
+.page-container p {
+  font-size: 1.1rem;
+  color: var(--color-text-dark);
+  margin-bottom: 2rem;
+}
+
+.primary-button { /* Re-using a common button style */
+  background: var(--gradient-orange-red);
+  color: var(--color-text-light);
+  padding: 12px 28px;
+  border-radius: var(--border-radius-button);
+  font-weight: 600;
+  font-size: 1rem;
+  box-shadow: var(--shadow-light);
+  transition: var(--transition-medium);
+}
+
+.primary-button:hover {
+  opacity: 0.95;
+  box-shadow: 0px 6px 20px rgba(255, 107, 107, 0.4);
+  transform: translateY(-2px);
+}
