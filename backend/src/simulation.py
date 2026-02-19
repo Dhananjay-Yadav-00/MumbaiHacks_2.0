@@ -70,21 +70,22 @@ class HospitalSimulation:
                 new_ambulances = max(0, hospital['ambulance_arrivals'] + random.randint(-1, 1))
                 changes['ambulance_arrivals'] = new_ambulances
 
-            # 4. Update Status based on AI Prediction
+            # 4. Derive status from actual bed occupancy — consistent with frontend logic
             if changes:
-                # Merge current state with changes for prediction
                 current_state = {**hospital, **changes}
-                predicted_load = predict_congestion(current_state)
-                
-                # REVISED THRESHOLDS for Realism (Previous: 100/150 were too low)
-                if predicted_load > 180: 
+                total_beds = current_state.get('total_beds') or 1
+                avail_beds = current_state.get('bed_availability', 0)
+                occ_pct = round(((total_beds - avail_beds) / total_beds) * 100)
+
+                # Same thresholds used across the entire system
+                if occ_pct >= 90:
                     changes['status'] = 'Red'
-                elif predicted_load > 120:
+                elif occ_pct >= 70:
                     changes['status'] = 'Yellow'
                 else:
                     changes['status'] = 'Green'
-                
+
                 update_hospital_data(hospital['hospital_id'], changes)
-                logger.debug(f"Updated {hospital['hospital_name']}: {changes}")
+                logger.debug(f"Updated {hospital['hospital_name']}: occ={occ_pct}% status={changes['status']}")
 
 simulation = HospitalSimulation()

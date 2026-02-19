@@ -65,25 +65,22 @@
 
 .top-bar {
   background-color: white;
-  padding: 1.5rem 2.5rem;
-  /* Increased padding */
+  padding: 0.75rem 2.5rem;
   border-bottom: 1px solid #e2e8f0;
   display: flex;
   justify-content: space-between;
   align-items: center;
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-  /* Added shadow for visibility */
   z-index: 10;
 }
 
 .top-bar h1 {
   margin: 0;
-  font-size: 1.75rem;
-  /* Increased font size */
-  font-weight: 800;
-  /* Bolder text */
+  font-size: 1.25rem;
+  font-weight: 700;
   color: #0f172a;
   letter-spacing: -0.025em;
+  white-space: nowrap;
 }
 
 .status-indicator {

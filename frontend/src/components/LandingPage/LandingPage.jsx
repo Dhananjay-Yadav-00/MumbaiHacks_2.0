@@ -90,10 +90,10 @@ const LandingPage = ({ systemStatus }) => {
           transition={{ delay: 0.8, duration: 0.6 }}
           style={{ marginTop: '2rem', display: 'flex', gap: '1rem', flexWrap: 'wrap', justifyContent: 'center' }}
         >
-          <button onClick={() => navigate('/system-admin')} className="role-button admin">
+          <button onClick={() => navigate('/login')} className="role-button admin">
             🛡️ System Admin
           </button>
-          <button onClick={() => navigate('/hospital-admin')} className="role-button hospital">
+          <button onClick={() => navigate('/login')} className="role-button hospital">
             🏥 Hospital Admin
           </button>
           <button onClick={() => navigate('/dispatcher')} className="role-button dispatcher">

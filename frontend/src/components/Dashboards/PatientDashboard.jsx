@@ -1,13 +1,10 @@
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect } from 'react';
 import axios from 'axios';
+import { useHospitalData } from '../../hooks/useHospitalData';
 
 const API_URL = import.meta.env.VITE_API_URL;
 
-function barColor(pct) {
-    if (pct >= 90) return '#ef4444';
-    if (pct >= 70) return '#f59e0b';
-    return '#22c55e';
-}
+import { getBarColor, getStatusColor, getStatusLabel } from '../../hospitalUtils';
 
 function distanceKm(lat1, lon1, lat2, lon2) {
     const R = 6371;
@@ -23,7 +20,7 @@ function HospitalRecommendCard({ hospital, userLat, userLon, patientCount, onBoo
     const total = hospital.total_beds || 100;
     const occ = total - avail;
     const pct = Math.min(100, Math.round((occ / total) * 100));
-    const color = barColor(pct);
+    const color = getBarColor(pct);
     const dist = (userLat && userLon) ? distanceKm(userLat, userLon, hospital.latitude, hospital.longitude).toFixed(1) : null;
     const statusMap = { Red: { label: '🔴 Critical', bg: '#fee2e2', tx: '#991b1b' }, Yellow: { label: '🟡 Busy', bg: '#fef9c3', tx: '#854d0e' }, Green: { label: '🟢 Available', bg: '#dcfce7', tx: '#166534' } };
     const st = statusMap[hospital.status] || statusMap.Green;
@@ -120,25 +117,17 @@ function BookingModal({ hospital, formData, onConfirm, onClose, booking, result 
 
 // ── Main PatientDashboard ─────────────────────────────────────────────────────
 export default function PatientDashboard() {
+    const { hospitals, refetch: refetchHospitals } = useHospitalData(6000);
     const [formData, setFormData] = useState({
         location: '', latitude: null, longitude: null,
         patient_count: 1, severity: 'Critical', booking_type: 'bed_only'
     });
-    const [hospitals, setHospitals] = useState([]);
     const [predictions, setPredictions] = useState([]);
     const [loadingPred, setLoadingPred] = useState(false);
     const [isLocating, setIsLocating] = useState(false);
     const [bookingHospital, setBookingHospital] = useState(null);
     const [booking, setBooking] = useState(false);
     const [bookingResult, setBookingResult] = useState(null);
-    const intervalRef = useRef(null);
-
-    const fetchHospitals = async () => {
-        try {
-            const res = await axios.get(`${API_URL}/api/hospitals`);
-            setHospitals(res.data);
-        } catch (err) { console.error(err); }
-    };
 
     const fetchPredictions = async () => {
         setLoadingPred(true);
@@ -150,10 +139,7 @@ export default function PatientDashboard() {
     };
 
     useEffect(() => {
-        fetchHospitals();
         fetchPredictions();
-        intervalRef.current = setInterval(fetchHospitals, 6000);
-        return () => clearInterval(intervalRef.current);
     }, []);
 
     const handleLiveLocation = () => {
@@ -191,7 +177,7 @@ export default function PatientDashboard() {
                 hospital_name: res.data.assigned_hospital_name || bookingHospital.hospital_name,
                 distance: res.data.distance_km?.toFixed(1) ?? '—',
             });
-            fetchHospitals(); // refresh bed counts
+            refetchHospitals(); // refresh bed counts
         } catch (err) {
             alert('Booking failed: ' + (err.response?.data?.error || err.message));
         }
@@ -347,7 +333,7 @@ export default function PatientDashboard() {
                                                     <div style={{ flex: 1, minWidth: 0 }}>
                                                         <div style={{ fontSize: '0.82rem', fontWeight: 600, color: '#1e293b', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>{p.hospital_name}</div>
                                                         <div style={{ height: 5, background: '#e2e8f0', borderRadius: 99, overflow: 'hidden', marginTop: '0.3rem' }}>
-                                                            <div style={{ height: '100%', width: `${predPct}%`, background: barColor(predPct), borderRadius: 99 }} />
+                                                            <div style={{ height: '100%', width: `${predPct}%`, background: getBarColor(predPct), borderRadius: 99 }} />
                                                         </div>
                                                     </div>
                                                     <div style={{ textAlign: 'right', whiteSpace: 'nowrap' }}>

@@ -1,6 +1,7 @@
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect } from 'react';
 import axios from 'axios';
-import './HospitalAdminDashboard.css'; // reuse same CSS design tokens
+import { getStatusColor, getBarColor, getStatusLabel } from '../../hospitalUtils';
+import { useHospitalData } from '../../hooks/useHospitalData';
 
 const API_URL = import.meta.env.VITE_API_URL;
 
@@ -10,14 +11,10 @@ function getHospitalTier(hospital) {
     return s === 'Red' ? 'critical' : s === 'Yellow' ? 'busy' : 'normal';
 }
 
-function barColor(pct) {
-    if (pct >= 90) return '#ef4444';
-    if (pct >= 70) return '#f59e0b';
-    return '#22c55e';
-}
-
 function StatusDot({ status }) {
-    const color = status === 'critical' ? '#ef4444' : status === 'busy' ? '#f59e0b' : '#22c55e';
+    // Map 'critical' -> 'Red', etc for getStatusColor
+    const map = { critical: 'Red', busy: 'Yellow', normal: 'Green' };
+    const color = getStatusColor(map[status] || 'Green');
     return <span style={{ display: 'inline-block', width: 8, height: 8, borderRadius: '50%', background: color, marginRight: 6 }} />;
 }
 
@@ -34,35 +31,28 @@ function formatTime(d) {
 }
 
 export default function SystemAdminDashboard() {
-    const [hospitals, setHospitals] = useState([]);
+    const { hospitals, loading: hospitalsLoading, lastUpdated, refetch } = useHospitalData(6000);
     const [logs, setLogs] = useState([]);
-    const [loading, setLoading] = useState(true);
+    const [loadingLogs, setLoadingLogs] = useState(true);
     const [retraining, setRetraining] = useState(false);
-    const [lastUpdated, setLastUpdated] = useState(new Date());
     const [filterStatus, setFilterStatus] = useState('all'); // all | critical | busy | normal
     const [search, setSearch] = useState('');
-    const intervalRef = useRef(null);
 
-    const fetchData = async () => {
-        try {
-            const [hRes, lRes] = await Promise.all([
-                axios.get(`${API_URL}/api/hospitals`),
-                axios.get(`${API_URL}/api/logs`).catch(() => ({ data: [] })) // graceful fallback
-            ]);
-            setHospitals(hRes.data);
-            setLogs(lRes.data);
-            setLastUpdated(new Date());
-        } catch (err) {
-            console.error('Error fetching data:', err);
-        } finally {
-            setLoading(false);
-        }
-    };
-
+    // Fetch logs separately
     useEffect(() => {
-        fetchData();
-        intervalRef.current = setInterval(fetchData, 6000);
-        return () => clearInterval(intervalRef.current);
+        const fetchLogs = async () => {
+            try {
+                const res = await axios.get(`${API_URL}/api/logs`);
+                setLogs(res.data);
+            } catch (err) {
+                console.error('Error fetching logs:', err);
+            } finally {
+                setLoadingLogs(false);
+            }
+        };
+        fetchLogs();
+        const interval = setInterval(fetchLogs, 6000);
+        return () => clearInterval(interval);
     }, []);
 
     const handleRetrain = async () => {
@@ -81,7 +71,7 @@ export default function SystemAdminDashboard() {
         if (!window.confirm(`Delete ${name}?`)) return;
         try {
             await axios.delete(`${API_URL}/api/admin/hospitals/${id}`);
-            fetchData();
+            // Refetching is handled by the hook's interval, or we could expose refetch from hook
         } catch (err) {
             alert('Error deleting: ' + err.message);
         }
@@ -106,7 +96,7 @@ export default function SystemAdminDashboard() {
         return matchFilter && matchSearch;
     });
 
-    if (loading) return (
+    if (hospitalsLoading && loadingLogs) return (
         <div className="had-loading">
             <div className="had-spinner" />
             <p>Loading System Data...</p>
@@ -119,7 +109,7 @@ export default function SystemAdminDashboard() {
             <div className="had-header">
                 <div className="had-header-left">
                     <h2>⚙️ System Administration</h2>
-                    <p>HealthHIVE AI Control Panel · Mumbai Network · ⏱ {formatTime(lastUpdated)}</p>
+                    <p>HealthHIVE AI Control Panel · Mumbai Network · ⏱ {lastUpdated ? formatTime(lastUpdated) : '--:--:--'}</p>
                 </div>
                 <div className="had-header-right">
                     <button
@@ -129,7 +119,7 @@ export default function SystemAdminDashboard() {
                     >
                         {retraining ? '⏳ Retraining...' : '🤖 Retrain AI Model'}
                     </button>
-                    <button className="had-refresh-btn" onClick={fetchData}>🔄 Refresh</button>
+                    <button className="had-refresh-btn" onClick={refetch}>🔄 Refresh</button>
                 </div>
             </div>
 
@@ -202,7 +192,7 @@ export default function SystemAdminDashboard() {
                             const total = h.total_beds || 100;
                             const occ = total - avail;
                             const pct = Math.min(100, Math.round((occ / total) * 100));
-                            const color = barColor(pct);
+                            const color = getBarColor(pct);
                             const statusLabel = tier === 'critical' ? '🔴 Critical' : tier === 'busy' ? '🟡 Busy' : '🟢 Normal';
 
                             return (

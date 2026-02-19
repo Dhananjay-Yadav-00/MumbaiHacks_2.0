@@ -1,7 +1,8 @@
-import { useState, useEffect, useRef } from 'react';
-import axios from 'axios';
+import { useState } from 'react';
 import HospitalCard from './HospitalCard';
 import './HospitalAdminDashboard.css';
+import { useHospitalData } from '../../hooks/useHospitalData';
+import { useAuth } from '../../context/AuthContext';
 
 const API_URL = import.meta.env.VITE_API_URL;
 
@@ -10,56 +11,28 @@ function formatTime(date) {
 }
 
 export default function HospitalAdminDashboard() {
-    const [hospitals, setHospitals] = useState([]);
-    const [loading, setLoading] = useState(true);
-    const [lastUpdated, setLastUpdated] = useState(new Date());
+    const { hospitals, loading, refetch, lastUpdated } = useHospitalData(6000);
+    const { user } = useAuth();
+    const isHospitalAdmin = user?.role === 'hospital';
+    // Hospital admins see only their own hospital; admins see all
+    const visibleHospitals = isHospitalAdmin && user?.hospitalId
+        ? hospitals.filter(h => h.hospital_id === user.hospitalId)
+        : hospitals;
     const [autoRefresh, setAutoRefresh] = useState(true);
-    const intervalRef = useRef(null);
 
-    const fetchData = async () => {
-        try {
-            const res = await axios.get(`${API_URL}/api/hospitals`);
-            setHospitals(res.data);
-            setLastUpdated(new Date());
-            setLoading(false);
-        } catch (err) {
-            console.error('Error fetching hospitals:', err);
-            setLoading(false);
-        }
-    };
-
-    useEffect(() => {
-        fetchData();
-    }, []);
-
-    useEffect(() => {
-        if (autoRefresh) {
-            intervalRef.current = setInterval(fetchData, 6000);
-        } else {
-            clearInterval(intervalRef.current);
-        }
-        return () => clearInterval(intervalRef.current);
-    }, [autoRefresh]);
-
-    // ── Network Summary — from REAL backend data ──────────────────────────────
-    let totalFacilities = hospitals.length;
+    // ── Network Summary — computed from visible hospitals ────────────────────
+    let totalFacilities = visibleHospitals.length;
     let totalAvailBeds = 0;
     let activeAlerts = 0;
     let totalAmbulances = 0;
-    let totalNormal = 0, totalBusy = 0, totalCritical = 0;
 
-    hospitals.forEach(h => {
-        const s = h.status || 'Green';
-        if (s === 'Red') { totalCritical++; activeAlerts += 3; }
-        else if (s === 'Yellow') { totalBusy++; activeAlerts += 1; }
-        else totalNormal++;
+    visibleHospitals.forEach(h => {
         totalAvailBeds += h.bed_availability || 0;
         totalAmbulances += h.ambulance_arrivals || 0;
+        activeAlerts += (h.alerts?.length || 0);
     });
 
-
-
-    if (loading) {
+    if (loading && hospitals.length === 0) {
         return (
             <div className="had-loading">
                 <div className="had-spinner" />
@@ -74,10 +47,14 @@ export default function HospitalAdminDashboard() {
             <div className="had-header">
                 <div className="had-header-left">
                     <h2>🏥 Hospital Administration</h2>
-                    <p>Managing {totalFacilities} facilities across Mumbai</p>
+                    <p>
+                        {isHospitalAdmin
+                            ? `Managing your hospital (${user?.hospitalId})`
+                            : `Managing ${totalFacilities} facilities across Mumbai`}
+                    </p>
                 </div>
                 <div className="had-header-right">
-                    <span className="had-timestamp">⏱ Last updated: {formatTime(lastUpdated)}</span>
+                    <span className="had-timestamp">⏱ Last updated: {formatTime(lastUpdated || new Date())}</span>
                     <label className="had-auto-refresh">
                         <input
                             type="checkbox"
@@ -87,7 +64,7 @@ export default function HospitalAdminDashboard() {
                         />
                         Auto-refresh
                     </label>
-                    <button className="had-refresh-btn" onClick={fetchData}>
+                    <button className="had-refresh-btn" onClick={refetch}>
                         🔄 Refresh
                     </button>
                 </div>
@@ -126,13 +103,18 @@ export default function HospitalAdminDashboard() {
             </div>
 
             {/* ── Hospital Cards ── */}
+            {isHospitalAdmin && (
+                <div style={{ background: '#eff6ff', border: '1px solid #bfdbfe', borderRadius: 10, padding: '0.65rem 1rem', fontSize: '0.83rem', color: '#1d4ed8', marginBottom: '1rem' }}>
+                    🔒 You are viewing only your hospital ({user?.hospitalId}). Edit controls are enabled for your hospital only.
+                </div>
+            )}
             <div className="had-cards-grid">
-                {hospitals.map(hospital => (
+                {visibleHospitals.map(hospital => (
                     <HospitalCard
                         key={hospital.hospital_id}
                         hospital={hospital}
-                        alerts={[]}
-                        onUpdate={fetchData}
+                        onUpdate={refetch}
+                        isOwner={!isHospitalAdmin || hospital.hospital_id === user?.hospitalId}
                     />
                 ))}
             </div>

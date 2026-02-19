@@ -170,17 +170,21 @@
 
 .hc-card-header {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: space-between;
-    padding: 1rem 1.25rem;
+    padding: 0.75rem 1.25rem;
     border-bottom: 1px solid #f1f5f9;
+    gap: 0.5rem;
 }
 
 .hc-card-header h3 {
     margin: 0;
-    font-size: 1rem;
+    font-size: 0.95rem;
     font-weight: 700;
     color: #1e293b;
+    white-space: normal;
+    word-break: break-word;
+    line-height: 1.3;
 }
 
 .hc-status-badge {

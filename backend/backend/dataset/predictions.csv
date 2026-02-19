@@ -1,0 +1,47 @@
+hospital_id,hospital_name,current_beds,predicted_beds,total_beds
+H001,MGM Hospital Vashi,6,0,111
+H002,P.D. Hinduja Hospital,3,2,120
+H003,Sion Hospital,10,15,162
+H004,Cooper Hospital,2,0,116
+H005,Saifee Hospital,3,1,202
+H006,Global Hospital,22,0,241
+H007,Kokilaben Dhirubhai Ambani Hospital,6,7,295
+H008,Jaslok Hospital,3,17,128
+H009,Lifeline Medicare Hospital,17,22,221
+H010,Breach Candy Hospital,17,16,232
+H011,St. Elizabeth's Hospital,13,20,171
+H012,Tata Memorial Hospital,7,29,205
+H013,Reliance Hospital Kopar Khairane,11,25,146
+H014,SRV Hospital,31,20,224
+H015,Wockhardt Hospital,55,85,224
+H016,Terna Speciality Hospital,61,90,230
+H017,Holy Family Hospital,54,20,268
+H018,Bombay Hospital,22,30,118
+H019,KEM Hospital,36,51,212
+H020,Fortis Hiranandani Hospital Vashi,35,30,127
+H021,Suvidha Hospital,41,38,170
+H022,K.J. Somaiya Hospital,53,26,194
+H023,Hinduja Healthcare Surgical,36,57,291
+H024,Masina Hospital,38,46,279
+H025,S.L. Raheja Hospital,20,16,171
+H026,Shatabdi Hospital,32,21,167
+H027,Bhabha Hospital,42,39,100
+H028,Cloudnine Hospital Vashi,121,127,269
+H029,Apollo Hospitals Navi Mumbai,76,70,197
+H030,Siddharth Hospital,100,99,182
+H031,Rajawadi Hospital,175,137,262
+H032,Sir J.J. Group of Hospitals,173,161,256
+H033,Prince Aly Khan Hospital,41,39,101
+H034,D Y Patil Hospital,55,40,131
+H035,Nanavati Hospital,107,90,209
+H036,Kapadia Multispeciality Hospital,144,168,233
+H037,Lilavati Hospital,90,66,198
+H038,H.N. Reliance Foundation Hospital,173,170,249
+H039,V.N. Desai Hospital,141,122,288
+H040,Wadia Hospital,79,55,219
+H041,Dr L H Hiranandani Hospital,83,69,146
+H042,Kohinoor Hospital,113,133,220
+H043,Fortis Hospital Mulund,65,62,105
+H044,Sushrusha Hospital,125,86,291
+H045,Holy Spirit Hospital,69,57,150
+H046,SevenHills Hospital,89,81,188

@@ -1,10 +1,12 @@
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 import MapDisplay from '../MapDisplay/MapDisplay';
+import { useHospitalData } from '../../hooks/useHospitalData';
 
 const API_URL = import.meta.env.VITE_API_URL;
 
 export default function DispatcherDashboard() {
+    const { hospitals: sourceHospitals } = useHospitalData(2000);
     const [hospitals, setHospitals] = useState([]);
     const [incident, setIncident] = useState({
         name: "Waiting for Incident...",
@@ -14,17 +16,16 @@ export default function DispatcherDashboard() {
     });
 
     useEffect(() => {
-        const fetchData = async () => {
+        const updateDashboard = async () => {
             try {
-                // Fetch Hospitals
-                const resHospitals = await axios.get(`${API_URL}/api/hospitals`);
-                let mapData = resHospitals.data.map(h => ({
-                    hospital_id: h.hospital_id, // Ensure ID is passed
+                // Map enriched data to MapDisplay format
+                let mapData = sourceHospitals.map(h => ({
+                    hospital_id: h.hospital_id,
                     hospital_name: h.hospital_name,
                     lat: h.latitude,
                     lon: h.longitude,
-                    assigned_critical: h.er_admissions,
-                    assigned_stable: h.bed_availability
+                    assigned_critical: h.er_admissions || 0,
+                    assigned_stable: h.bed_availability || 0
                 }));
 
                 // Fetch Latest Incident
@@ -74,14 +75,14 @@ export default function DispatcherDashboard() {
                     setHospitals(mapData); // Show all if no active incident
                 }
             } catch (err) {
-                console.error("Error fetching data:", err);
+                console.error("Error updating dispatcher dashboard:", err);
             }
         };
 
-        fetchData();
-        const interval = setInterval(fetchData, 2000); // Poll every 2 seconds
+        updateDashboard();
+        const interval = setInterval(updateDashboard, 2000); // Poll newly for incidents
         return () => clearInterval(interval);
-    }, []);
+    }, [sourceHospitals]);
 
     return (
         <div className="dashboard-view" style={{ height: '100%', display: 'flex', flexDirection: 'column' }}>
