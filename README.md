@@ -59,6 +59,15 @@ Executes dynamic routing and load balancing:
 
 ---
 
+How to run ?
+
+cd backend
+.\venv\Scripts\python -m flask --app src.app run --host=0.0.0.0 --port=5001
+
+cd frontend
+npm run dev
+
+
 ## 🔗 Project Link
 
 🌐 **Live Demo:** https://mumbai-hacks-five.vercel.app
